@@ -1124,21 +1124,16 @@ h6:hover .anchor-link {
 <p>Regarding the GitHub account, if you don't have one, just go to <a href="https://github.com/">GitHub</a> and sign it up using your email address. It's quite straightforward.</p>
 <h2 id="Set-Up-a-Virtual-Environment-Setup">Set Up a Virtual Environment Setup<a class="anchor-link" href="#Set-Up-a-Virtual-Environment-Setup">¶</a></h2><p>Virtual environment is a tool to create isolated environment independent of the main Python distribution on your computer. Each time when you start a Python project, it's recommended to create an isolated environment for the project, so that you can avoid problem of one project requring version 123 of a Python library but another project requiring version 456 instead. Setting up your blog is a new project and you should set up a virtual environment just for it.</p>
 <ul>
-<li>With <code>Anaconda Python installation</code> completed, you can now use conda to set up a virtual environment by executing <code>conda create -n yourenvname python=x.x anaconda</code> in the Windows command shell. <code>yourenvname</code> can be replaced with anything that you'd like to name your virtual environment. In my case, I called my virtual environment <code>pelicantest</code>.</li>
-</ul>
-<ul>
-<li>Upon executing <code>conda create -n yourenvname python=x.x anaconda</code>, you'll be prompted to confirm whether you'd like to proceed. Press <code>y</code> to proceed. </li>
-</ul>
-<ul>
+<li><p>With <code>Anaconda Python installation</code> completed, you can now use conda to set up a virtual environment by executing <code>conda create -n yourenvname python=x.x anaconda</code> in the Windows command shell. <code>yourenvname</code> can be replaced with anything that you'd like to name your virtual environment. In my case, I called my virtual environment <code>pelicantest</code>.</p>
+</li>
+<li><p>Upon executing <code>conda create -n yourenvname python=x.x anaconda</code>, you'll be prompted to confirm whether you'd like to proceed. Press <code>y</code> to proceed.</p>
+</li>
 <li><p>To <code>activate</code> your virtual environment, execute <code>activate yourenvname</code> in the Windows command shell.</p>
-<p>C:\Users\Dan>activate pelicantest</p>
 </li>
 </ul>
+<pre><code>C:\Users\Dan>activate pelicantest</code></pre>
 <p>And you should see <code>(yourenvname)</code> appears as the leading string in the next line in the Windows command shell.</p>
-<pre><code>(pelicantest) C:\Users\Dan>
-
-
-</code></pre>
+<pre><code>(pelicantest) C:\Users\Dan></code></pre>
 <p>Upon successfully set up the virtual environment, a new folder <code>pelicantest</code> appears under <code>C:\Users\Dan\Anaconda3\envs\</code>.</p>
 <p>Some of you may have a different Python distribution other than Anaconda. In that case, you can set up <code>virtualenv</code> and activate it by following instructions <a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">here</a>.</p>
 <h2 id="Install-Pelican-and-Python-Packages">Install Pelican and Python Packages<a class="anchor-link" href="#Install-Pelican-and-Python-Packages">¶</a></h2><p>Pelican is one of the most popular <code>static site generators</code>. Static site generators free you from manually editing HTML files. With their help, you can focus on:</p>
@@ -1157,152 +1152,173 @@ h6:hover .anchor-link {
 <p>If you're interested in comparing pros and cons of these three static site genertors, this <a href="http://blog.formkeep.com/not-sure-which-static-site-generator-to-pick/">link</a> provides more details.</p>
 <p>Now follow the steps below to install Pelican and other Python packages to your Python virtual environment.</p>
 <ul>
-<li>Create a folder on your computer to store content and templates of your website. Name it anything you'd like. In my case, I created a folder <code>TDSblog</code> on <code>D:\</code> drive. </li>
+<li><p>Create a folder on your computer to store content and templates of your website. Name it anything you'd like. In my case, I created a folder <code>TDSblog</code> on <code>D:\</code> drive.</p>
+</li>
+<li><p>Enter your newly created folder using following command in the Windows command shell. Note that my virtual environment is active since its names leads the command line.</p>
+</li>
 </ul>
-<ul>
-<li>Enter your newly created folder using following command in the Windows command shell. Note that my virtual environment is active since its names leads the command line. </li>
-</ul>
-<blockquote><p>(pelicantest) C:\Users\Dan>pushd D:\TDSblog</p>
-</blockquote>
+<pre><code>(pelicantest) C:\Users\Dan>pushd D:\TDSblog</code></pre>
 <ul>
 <li>Upon entering your new folder, you should see following in your Windows command shell</li>
 </ul>
-<blockquote><p>(pelicantest) D:\TDSblog></p>
-</blockquote>
+<pre><code>(pelicantest) D:\TDSblog></code></pre>
 <ul>
 <li><p>Create a file <code>.gitignore</code> with content on this <a href="https://github.com/github/gitignore/blob/master/Python.gitignore">page</a> and save <code>.gitignore</code> in your new folder.</p>
 <p>It tells Git to ignore files of certain types when pushing content from local computer to remote repository later. Files that we want Git to ignore are usually those automated generated log files and build files etc. This <a href="https://git-scm.com/docs/gitignore">link</a> provides more background about <code>.gitignore</code> if you're interested.</p>
 </li>
-</ul>
-<ul>
 <li><p>Create a file <code>requirements.txt</code> and save it to your folder <code>C:\Users\Dan\Anaconda3\envs\pelicantest</code>.</p>
 <p>Anaconda Python installation includes over <a href="https://docs.continuum.io/anaconda/packages/pkg-docs">100 pre-built packages</a>. So if you installed Anaconda Python distribution, copy and paste the following content into <code>requirements.txt</code>. They are Python packages that you'll find useful when buidling websites but may be not included in Anaconda Python installation.</p>
 </li>
 </ul>
-<blockquote><p>beautifulsoup4~=4.6.0</p>
-<p>ghp-import~=0.5.5</p>
-<p>gitpython~=2.1.5</p>
-<p>html5lib~=0.999999999</p>
-<p>Markdown~=2.6.8</p>
-<p>Pygments~=2.2.0</p>
-<p>pyreadline~=2.1</p>
-<p>smartypants~=2.0.0</p>
-<p>typogrify~=2.0.7</p>
-</blockquote>
+<pre><code>beautifulsoup4~=4.6.0
+
+ghp-import~=0.5.5
+
+gitpython~=2.1.5
+
+html5lib~=0.999999999
+
+Markdown~=2.6.8
+
+Pygments~=2.2.0
+
+pyreadline~=2.1
+
+smartypants~=2.0.0
+
+typogrify~=2.0.7</code></pre>
 <pre><code>If you a different Python distribution other than Anaconda, copy and paste the following contents to `requirements.txt` instead, in case your installation doesn't cover these useful pacakges for website building. 
 
 </code></pre>
-<blockquote><p>beautifulsoup4~=4.6.0</p>
-<p>Fabric3~=1.13.1.post1</p>
-<p>feedgenerator~=1.9</p>
-<p>ghp-import~=0.5.5</p>
-<p>gitpython~2.1.5</p>
-<p>html5lib~=0.999999999</p>
-<p>jupyter~=1.0.0</p>
-<p>ipython~=6.1.0</p>
-<p>Markdown~=2.6.8</p>
-<p>matplotlib~=2.0.2</p>
-<p>nbconvert~=5.2.1</p>
-<p>pelican~=3.7.1</p>
-<p>Pygments~=2.2.0</p>
-<p>pyreadline~=2.1</p>
-<p>smartypants~=2.0.0</p>
-<p>typogrify~=2.0.7</p>
-</blockquote>
+<pre><code>beautifulsoup4~=4.6.0
+
+Fabric3~=1.13.1.post1
+
+feedgenerator~=1.9
+
+ghp-import~=0.5.5
+
+gitpython~2.1.5
+
+html5lib~=0.999999999
+
+jupyter~=1.0.0
+
+ipython~=6.1.0
+
+Markdown~=2.6.8
+
+matplotlib~=2.0.2
+
+nbconvert~=5.2.1
+
+pelican~=3.7.1
+
+Pygments~=2.2.0
+
+pyreadline~=2.1
+
+smartypants~=2.0.0
+
+typogrify~=2.0.7</code></pre>
 <pre><code>If you're interested in the latest version of these Python packages, go to this [site](https://pypi.python.org/pypi) and search for the package you'd like to update. It also explains what a package is for.
 
 </code></pre>
 <ul>
 <li>Execute the following command in Windows command shell to install Python packages listed in <code>requirements.txt</code></li>
 </ul>
-<blockquote><p>(pelicantest) D:\TDSblog>pip install -r C:\Users\Dan\Anaconda3\envs\pelicantest\requirements.txt</p>
-</blockquote>
+<pre><code>(pelicantest) D:\TDSblog>pip install -r C:\Users\Dan\Anaconda3\envs\pelicantest\requirements.txt</code></pre>
 <pre><code>To double check whether the installation is successful, execute the following commands. It'll show all the Python packages installed so far and you should be able to find those listed in `requirements.txt`.
 
 </code></pre>
-<blockquote><p>(pelicantest) D:\TDSblog>pip list</p>
-</blockquote>
+<pre><code>(pelicantest) D:\TDSblog>pip list</code></pre>
 <h2 id="Create-a-Default-Website">Create a Default Website<a class="anchor-link" href="#Create-a-Default-Website">¶</a></h2><p>With the virtual environment set up and Python packages installed, we can now start setting up the website in the default style.</p>
 <ul>
 <li>Execute the the following command to start the initial setup of your website</li>
 </ul>
-<blockquote><p>(pelicantest) D:\TDSblog>pelican-quickstart</p>
-</blockquote>
+<pre><code>(pelicantest) D:\TDSblog>pelican-quickstart</code></pre>
 <ul>
 <li>The following questions will pop up in the Windows command shell. For the initial setup, you can press <code>enter</code> for majority of questions, except the ones asking you about the website title, author name, default language, whether to specify a URL prefix, and time zone.</li>
 </ul>
-<blockquote><p>Where do you want to create your new web site? [.]</p>
-<p>What will be the title of this web site? Superduper Blog</p>
-<p>Who will be the author of this web site? Superduper Writer</p>
-<p>What will be the default language of this web site? [en]</p>
-<p>Do you want to specify a URL prefix? e.g., <a href="http://example.com">http://example.com</a>   (Y/n) n</p>
-<p>Do you want to enable article pagination? (Y/n)</p>
-<p>How many articles per page do you want? [10]</p>
-<p>What is your time zone? [Europe/Paris] America/New York</p>
-<p>Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n)</p>
-<p>Do you want an auto-reload & simpleHTTP script to assist with theme and site development? (Y/n)</p>
-<p>Do you want to upload your website using FTP? (y/N)</p>
-<p>Do you want to upload your website using SSH? (y/N)</p>
-<p>Do you want to upload your website using Dropbox? (y/N)</p>
-<p>Do you want to upload your website using S3? (y/N)</p>
-<p>Do you want to upload your website using Rackspace Cloud Files? (y/N)</p>
-<p>Do you want to upload your website using GitHub Pages? (y/N)</p>
-</blockquote>
+<pre><code>Where do you want to create your new web site? [.]
+
+What will be the title of this web site? Superduper Blog
+
+Who will be the author of this web site? Superduper Writer
+
+What will be the default language of this web site? [en]
+
+Do you want to specify a URL prefix? e.g., http://example.com   (Y/n) n
+
+Do you want to enable article pagination? (Y/n)
+
+How many articles per page do you want? [10]
+
+What is your time zone? [Europe/Paris] America/New York
+
+Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n)
+
+Do you want an auto-reload & simpleHTTP script to assist with theme and site development? (Y/n)
+
+Do you want to upload your website using FTP? (y/N)
+
+Do you want to upload your website using SSH? (y/N)
+
+Do you want to upload your website using Dropbox? (y/N)
+
+Do you want to upload your website using S3? (y/N)
+
+Do you want to upload your website using Rackspace Cloud Files? (y/N)
+
+Do you want to upload your website using GitHub Pages? (y/N)</code></pre>
 <ul>
 <li><p>Upon completing these questions, some new files and sub folders will be automatically created in your folder, such as <code>content</code> folder, <code>output</code> folder, and <code>fabfile.py</code>, <code>pelicanconf.py</code>, and <code>publishconf.py</code>.</p>
 <p>To view the content of your folder, run the following command:</p>
 </li>
 </ul>
-<blockquote><p>(pelicantest) D:\TDSblog>dir</p>
-</blockquote>
+<pre><code>(pelicantest) D:\TDSblog>dir</code></pre>
 <pre><code>To view the structure of your folder, run the following command:
 
 </code></pre>
-<blockquote><p>(pelicantest) D:\TDSblog>tree</p>
-</blockquote>
+<pre><code>(pelicantest) D:\TDSblog>tree</code></pre>
 <h2 id="Apply-Bootstrap3-Theme-and-Install-Plugins">Apply Bootstrap3 Theme and Install Plugins<a class="anchor-link" href="#Apply-Bootstrap3-Theme-and-Install-Plugins">¶</a></h2><p>To get the look and feel of the default theme of Pelican-based website, check out <a href="https://blog.getpelican.com/">this link</a>. If you're interested in other Pelican themes, check out <a href="https://github.com/getpelican/pelican-themes">this link</a>.</p>
 <p>In this guide, we'll use <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3">Bootstrap3</a> as the website theme.</p>
 <ul>
 <li>Execute the following command to set up your folder as a git repository:</li>
 </ul>
-<blockquote><p>(pelicantest) D:\TDSblog>git init</p>
-</blockquote>
+<pre><code>(pelicantest) D:\TDSblog>git init</code></pre>
 <ul>
 <li>Execute the following command to clone the Pelican themes repository to your local computer:</li>
 </ul>
-<blockquote><p>(pelicantest) D:\TDSblog>git clone <a href="https://github.com/getpelican/pelican-themes/">https://github.com/getpelican/pelican-themes/</a> themes</p>
-</blockquote>
+<pre><code>(pelicantest) D:\TDSblog>git clone https://github.com/getpelican/pelican-themes/ themes</code></pre>
 <ul>
 <li>Execute the following command to clone the Pelican plugins repository to your local computer: </li>
 </ul>
-<blockquote><p>(pelicantest) D:\TDSblog>git clone <a href="https://github.com/getpelican/pelican-plugins">https://github.com/getpelican/pelican-plugins</a> plugins</p>
-</blockquote>
+<pre><code>(pelicantest) D:\TDSblog>git clone https://github.com/getpelican/pelican-plugins plugins</code></pre>
 <ul>
 <li>Add the following information to the bottom of <code>pelicanconf.py</code> in your folder and save. </li>
 </ul>
-<blockquote><p>MARKUP = ('md', 'ipynb')</p>
-<p>PLUGIN_PATHS = ['plugins']
-PLUGINS = ['ipynb.markup','i18n_subsites']</p>
-<p>THEME = 'themes/pelican-bootstrap3'
-JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}</p>
-</blockquote>
+<pre><code>MARKUP = ('md', 'ipynb')
+
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['ipynb.markup','i18n_subsites']
+
+THEME = 'themes/pelican-bootstrap3'
+JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}</code></pre>
 <ul>
 <li>Execute the following command to add the Pelican plugins for Jupyter/IPython Notebooks</li>
 </ul>
-<blockquote><p>(pelicantest) D:\TDSblog>git submodule add git://github.com/danielfrg/pelican-ipynb.git plugins/ipynb</p>
-</blockquote>
+<pre><code>(pelicantest) D:\TDSblog>git submodule add git://github.com/danielfrg/pelican-ipynb.git plugins/ipynb</code></pre>
 <ul>
 <li><p>Upon completing the steps above, you should have additional files and sub folders created in your folder, such as <code>themes</code> folder, <code>plugins</code> folder, and <code>.gitmodules</code> file.</p>
 <p>To view the content of your folder, run the following command:</p>
 </li>
 </ul>
-<blockquote><p>(pelicantest) D:\TDSblog>dir</p>
-</blockquote>
+<pre><code>(pelicantest) D:\TDSblog>dir</code></pre>
 <pre><code>To view the structure of your folder, run the following command:
 
 </code></pre>
-<blockquote><p>(pelicantest) D:\TDSblog>tree</p>
-</blockquote>
+<pre><code>(pelicantest) D:\TDSblog>tree</code></pre>
 <h2 id="Write-the-First-Blog-Post">Write the First Blog Post<a class="anchor-link" href="#Write-the-First-Blog-Post">¶</a></h2><p>Once you complete installing the Pelican themes and plugins, you can start writing your first blog post using the Jupyter Notebook interface.</p>
 <ul>
 <li>Create a Jupyter Notebook (a <code>.ipynb</code> file) with any content you'd like and save it to the <code>content</code> folder. </li>
@@ -1318,40 +1334,47 @@ JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}</p>
 <li><p>Enter the following content into the <code>.ipynb-meta</code> file and save it to your <code>content</code> folder.</p>
 </li>
 </ul>
-<blockquote><p>Title:</p>
-<p>Slug:</p>
-<p>Date:</p>
-<p>Category:</p>
-<p>Tags:</p>
-<p>Author:</p>
-<p>Summary:</p>
-</blockquote>
+<pre><code>Title:
+
+Slug:
+
+Date:
+
+Category:
+
+Tags:
+
+Author:
+
+Summary:</code></pre>
 <p>For example, the Jupyter Notebook I created is <code>first-post.ipynb</code> and the metadata file I created is <code>first-post.ipynb-meta</code> with the following content:</p>
-<blockquote><p>Title: First Post</p>
-<p>Slug: first-post</p>
-<p>Date: 2017-07-09 15:00</p>
-<p>Category: posts</p>
-<p>Tags: Pelican Python GitHub Jupyter</p>
-<p>Author: Superduper Writer</p>
-<p>Summary: First blog post on Superduper Blog</p>
-</blockquote>
+<pre><code>Title: First Post
+
+Slug: first-post
+
+Date: 2017-07-09 15:00
+
+Category: posts
+
+Tags: Pelican Python GitHub Jupyter
+
+Author: Superduper Writer
+
+Summary: First blog post on Superduper Blog</code></pre>
 <p><code>.ipynb</code> and <code>.ipynb-meta</code> should be in pairs in the <code>content</code> folder when adding a new post. <code>.ipynb</code> provides the content of your post, such as the charts, words, code etc. and <code>.ipynb-meta</code> provides the metadata of your post.</p>
 <h2 id="Generate-HTML-Files">Generate HTML Files<a class="anchor-link" href="#Generate-HTML-Files">¶</a></h2><p>Now you've completed writing the first post and its metadata, we'll generate HTML files and preview the blog before posting it to GitHub. Before starting the following steps, make sure you're still under the main folder, not under <code>content</code>. If not, run <code>pushd yourfolder</code> in the Windows command shell. In my case, I run <code>pushd D:\TDSblog</code> instead.</p>
 <ul>
 <li>Run the following command to generate HTML files</li>
 </ul>
-<blockquote><p>(pelicantest) D:\TDSblog>pelican content</p>
-</blockquote>
+<pre><code>(pelicantest) D:\TDSblog>pelican content</code></pre>
 <ul>
 <li>Go to the <code>output</code> folder by executing the following command</li>
 </ul>
-<blockquote><p>(pelicantest) D:\TDSblog>cd output</p>
-</blockquote>
+<pre><code>(pelicantest) D:\TDSblog>cd output</code></pre>
 <ul>
 <li>Run the following command to post your blog to local server</li>
 </ul>
-<blockquote><p>(pelicantest) D:\TDSblog>python -m pelican.server</p>
-</blockquote>
+<pre><code>(pelicantest) D:\TDSblog>python -m pelican.server</code></pre>
 <ul>
 <li>Preview the blog by visiting <code>localhost:8000</code> using your internet browser. </li>
 </ul>
@@ -1368,26 +1391,22 @@ JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}</p>
 <ul>
 <li>Run the following command to add the new remote repository you just created for your local git repository. Replace <code>username</code> with the name of your GitHub account. Note that you need to run the command under the main folder where your blog files sit.</li>
 </ul>
-<blockquote><p>(pelicantest) D:\TDSblog>git remote add origin git@github.com:username/username.github.io.git</p>
-</blockquote>
+<pre><code>(pelicantest) D:\TDSblog>git remote add origin git@github.com:username/username.github.io.git</code></pre>
 <ul>
-<li>Update <code>SITEURL</code> in <code>publishconf.py</code> in your local folder, by setting <code>SITEURL</code> to <code>https://username.github.io</code>. Replace <code>username</code> with the name of your GitHub account.</li>
+<li><p>Update <code>SITEURL</code> in <code>publishconf.py</code> in your local folder, by setting <code>SITEURL</code> to <code>https://username.github.io</code>. Replace <code>username</code> with the name of your GitHub account.</p>
+</li>
+<li><p>Run the following command to configure Pelican settings in <code>publishconf.py</code></p>
+</li>
 </ul>
-<ul>
-<li>Run the following command to configure Pelican settings in <code>publishconf.py</code></li>
-</ul>
-<blockquote><p>(pelicantest) D:\TDSblog>pelican content -s publishconf.py</p>
-</blockquote>
+<pre><code>(pelicantest) D:\TDSblog>pelican content -s publishconf.py</code></pre>
 <ul>
 <li>Run the following command from your main folder in order to import the content of <code>output</code> folder to the master branch</li>
 </ul>
-<blockquote><p>(pelicantest) D:\TDSblog>ghp-import output -b master</p>
-</blockquote>
+<pre><code>(pelicantest) D:\TDSblog>ghp-import output -b master</code></pre>
 <ul>
 <li>Run the following command from your main folder in order to push the content to GitHub</li>
 </ul>
-<blockquote><p>(pelicantest) D:\TDSblog>git push origin master</p>
-</blockquote>
+<pre><code>(pelicantest) D:\TDSblog>git push origin master</code></pre>
 <ul>
 <li>Visit <code>https://username.github.io</code> with <code>username</code> replaced by the name of your GitHub account. You should see your blog running on the GitHub.io domain. </li>
 </ul>
