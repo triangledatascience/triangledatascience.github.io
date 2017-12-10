@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Triangle Data Science - posts</title><link href="https://triangledatascience.github.io/" rel="alternate"></link><link href="https://triangledatascience.github.io/feeds/posts.atom.xml" rel="self"></link><id>https://triangledatascience.github.io/</id><updated>2017-07-03T13:46:00-04:00</updated><entry><title>First Post</title><link href="https://triangledatascience.github.io/first-post.html" rel="alternate"></link><published>2017-07-03T13:46:00-04:00</published><updated>2017-07-03T13:46:00-04:00</updated><author><name>Dan</name></author><id>tag:triangledatascience.github.io,2017-07-03:/first-post.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Triangle Data Science - posts</title><link href="https://triangledatascience.github.io/" rel="alternate"></link><link href="https://triangledatascience.github.io/feeds/posts.atom.xml" rel="self"></link><id>https://triangledatascience.github.io/</id><updated>2017-12-10T15:10:00-05:00</updated><entry><title>Guide to Creating GitHub Pages using Python and Jupyter Notebook</title><link href="https://triangledatascience.github.io/github-page-creation-guide.html" rel="alternate"></link><published>2017-12-10T15:10:00-05:00</published><updated>2017-12-10T15:10:00-05:00</updated><author><name>Dan</name></author><id>tag:triangledatascience.github.io,2017-12-10:/github-page-creation-guide.html</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
 &lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="First-post!"&gt;First post!&lt;a class="anchor-link" href="#First-post!"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;This will be the first post in our new Pelican blog! You can add any code or markdown cells to this Jupyter notebook, and they will be rendered on your blog.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+&lt;h1 id="A-Beginner's-Guide-to-Creating-a-Blog"&gt;A Beginner's Guide to Creating a Blog&lt;a class="anchor-link" href="#A-Beginner's-Guide-to-Creating-a-Blog"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;h3 id="Using-Python,-GitHub,-Pelican,-and-Jupyter-Notebook"&gt;Using Python, GitHub, Pelican, and Jupyter Notebook&lt;a class="anchor-link" href="#Using-Python,-GitHub,-Pelican,-and-Jupyter-Notebook"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;hr /&gt;
+&lt;p&gt;So you want to create a blog?&lt;/p&gt;
+&lt;p&gt;Congratulations that you finally decided to take the first step!&lt;/p&gt;
+&lt;p&gt;In this guide, I will walk you through step-by-step how to create a blog on GitHub.io. The good news is that all the tools used in this process are free:) At the end of the guide, you should be able to:&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -987,135 +985,319 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="First-post!"&gt;First post!&lt;a class="anchor-link" href="#First-post!"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;This will be the first post in our new Pelican blog! You can add any code or markdown cells to this Jupyter notebook, and they will be rendered on your blog.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [2]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;random&lt;/span&gt;
+&lt;h1 id="A-Beginner's-Guide-to-Creating-a-Blog"&gt;A Beginner's Guide to Creating a Blog&lt;a class="anchor-link" href="#A-Beginner's-Guide-to-Creating-a-Blog"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;h3 id="Using-Python,-GitHub,-Pelican,-and-Jupyter-Notebook"&gt;Using Python, GitHub, Pelican, and Jupyter Notebook&lt;a class="anchor-link" href="#Using-Python,-GitHub,-Pelican,-and-Jupyter-Notebook"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;hr /&gt;
+&lt;p&gt;So you want to create a blog?&lt;/p&gt;
+&lt;p&gt;Congratulations that you finally decided to take the first step!&lt;/p&gt;
+&lt;p&gt;In this guide, I will walk you through step-by-step how to create a blog on GitHub.io. The good news is that all the tools used in this process are free:) At the end of the guide, you should be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a blog on GitHub.io &lt;/li&gt;
+&lt;li&gt;Set up the initial look and feel for the blog using Pelican Bootstrap3 theme&lt;/li&gt;
+&lt;li&gt;Write your first post using Jupyter Notebook and Markdown&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I'm using Windows to demonstrate the steps. There could be some differences if you use a different OS but the general steps should be quite similar.&lt;/p&gt;
+&lt;h2 id="Prerequisites"&gt;Prerequisites&lt;a class="anchor-link" href="#Prerequisites"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Before we get into the business of creating a blog, let's make sure you have a couple of things ready:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python 3 or Python 2.7 set up on your computer (I have Python 3 on my computer but it's fine if you prefer Python 2.7)&lt;/li&gt;
+&lt;li&gt;A GitHub account&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you have both, feel free to skip this section and move to &lt;code&gt;Virtual Environment Setup&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If you don't have Python 3 or Python 2.7 on your computer, I highly recommend you to use &lt;code&gt;Anaconda Python installation&lt;/code&gt;, &lt;em&gt;especially&lt;/em&gt; if you work or are interested in working in the field of data science. Anaconda Python installation covers hundreds of packages that you'll find useful when doing analytics. It also includes &lt;code&gt;Jupyter Notebook&lt;/code&gt; installatioin which we'll use to build your first blog post.&lt;/p&gt;
+&lt;p&gt;Anaconda Python installation is pretty painless, you need to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Download the installer from &lt;a href="https://www.continuum.io/downloads"&gt;this website&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;Run the .exe downloaded and follow instructions on the screen &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I installed Anaconda Python distribution to the default path &lt;code&gt;C:\Users\Dan\Anaconda3&lt;/code&gt;. The version of installer you should download depends on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Whether your computer is 64-Bit or 32-Bit (mine is 64-Bit)&lt;/li&gt;
+&lt;li&gt;Whether you prefer to install Python 3 or Python 2.7 (I installed Python 3)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once Python installation is completed, double check whether the installation is successful by executing &lt;code&gt;conda info --all&lt;/code&gt; in the Windows command shell.&lt;/p&gt;
+&lt;p&gt;If you're not familiar windows command shell, you basically need to:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Click on the Windows start button&lt;/li&gt;
+&lt;li&gt;Enter &lt;code&gt;CMD&lt;/code&gt; in the search box and hit enter&lt;/li&gt;
+&lt;li&gt;Click on &lt;code&gt;Command Prompt&lt;/code&gt; in the search results and a black window would pop up&lt;/li&gt;
+&lt;li&gt;Enter &lt;code&gt;conda info --all&lt;/code&gt; into the black window and hit enter&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Regarding the GitHub account, if you don't have one, just go to &lt;a href="https://github.com/"&gt;GitHub&lt;/a&gt; and sign it up using your email address. It's quite straightforward.&lt;/p&gt;
+&lt;h2 id="Set-Up-a-Virtual-Environment-Setup"&gt;Set Up a Virtual Environment Setup&lt;a class="anchor-link" href="#Set-Up-a-Virtual-Environment-Setup"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Virtual environment is a tool to create isolated environment independent of the main Python distribution on your computer. Each time when you start a Python project, it's recommended to create an isolated environment for the project, so that you can avoid problem of one project requring version 123 of a Python library but another project requiring version 456 instead. Setting up your blog is a new project and you should set up a virtual environment just for it.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;With &lt;code&gt;Anaconda Python installation&lt;/code&gt; completed, you can now use conda to set up a virtual environment by executing &lt;code&gt;conda create -n yourenvname python=x.x anaconda&lt;/code&gt; in the Windows command shell. &lt;code&gt;yourenvname&lt;/code&gt; can be replaced with anything that you'd like to name your virtual environment. In my case, I called my virtual environment &lt;code&gt;pelicantest&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Upon executing &lt;code&gt;conda create -n yourenvname python=x.x anaconda&lt;/code&gt;, you'll be prompted to confirm whether you'd like to proceed. Press &lt;code&gt;y&lt;/code&gt; to proceed. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;To &lt;code&gt;activate&lt;/code&gt; your virtual environment, execute &lt;code&gt;activate yourenvname&lt;/code&gt; in the Windows command shell.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;C:\Users\Dan&gt;activate pelicantest&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;And you should see `(yourenvname)` appears as the leading string in the next line in the Windows command shell.
 
-&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;randint&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;
-&lt;div class="prompt output_prompt"&gt;Out[2]:&lt;/div&gt;
-&lt;div class="output_text output_subarea output_execute_result"&gt;
-&lt;pre&gt;4&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [4]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;&lt;p&gt;(pelicantest) C:\Users\Dan&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Upon successfully set up the virtual environment, a new folder &lt;code&gt;pelicantest&lt;/code&gt; appears under &lt;code&gt;C:\Users\Dan\Anaconda3\envs\&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Some of you may have a different Python distribution other than Anaconda. In that case, you can set up &lt;code&gt;virtualenv&lt;/code&gt; and activate it by following instructions &lt;a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="Install-Pelican-and-Python-Packages"&gt;Install Pelican and Python Packages&lt;a class="anchor-link" href="#Install-Pelican-and-Python-Packages"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Pelican is one of the most popular &lt;code&gt;static site generators&lt;/code&gt;. Static site generators free you from manually editing HTML files. With their help, you can focus on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create and edit content of your website in extremely simple format, e.g. in &lt;code&gt;Markdown&lt;/code&gt; or other &lt;code&gt;markup languages&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Manage and update the &lt;code&gt;theme&lt;/code&gt; of your website by coding the template files&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Static site generators can automatically convert your Markdown files and template files into HTML. Isn't that great?!&lt;/p&gt;
+&lt;p&gt;There are a few popular static site generators:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; written in &lt;code&gt;Ruby&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.getpelican.com/"&gt;Pelican&lt;/a&gt; written in &lt;code&gt;Python&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.metalsmith.io/"&gt;Metalsmith&lt;/a&gt; written in &lt;code&gt;JavaScript&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Since this guide is about using Python to create the website, we pick Pelican as our static site generator. With Pelican, we can also enable &lt;code&gt;Jupyter Notebook&lt;/code&gt; integration by adding it as a &lt;code&gt;plug-in&lt;/code&gt; which we'll discuss it later.&lt;/p&gt;
+&lt;p&gt;If you're interested in comparing pros and cons of these three static site genertors, this &lt;a href="http://blog.formkeep.com/not-sure-which-static-site-generator-to-pick/"&gt;link&lt;/a&gt; provides more details.&lt;/p&gt;
+&lt;p&gt;Now follow the steps below to install Pelican and other Python packages to your Python virtual environment.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a folder on your computer to store content and templates of your website. Name it anything you'd like. In my case, I created a folder &lt;code&gt;TDSblog&lt;/code&gt; on &lt;code&gt;D:\&lt;/code&gt; drive. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Enter your newly created folder using following command in the Windows command shell. Note that my virtual environment is active since its names leads the command line. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;(pelicantest) C:\Users\Dan&gt;pushd D:\TDSblog&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Upon entering your new folder, you should see following in your Windows command shell&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;(pelicantest) D:\TDSblog&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Create a file &lt;code&gt;.gitignore&lt;/code&gt; with content on this &lt;a href="https://github.com/github/gitignore/blob/master/Python.gitignore"&gt;page&lt;/a&gt; and save &lt;code&gt;.gitignore&lt;/code&gt; in your new folder.&lt;/p&gt;
+&lt;p&gt;It tells Git to ignore files of certain types when pushing content from local computer to remote repository later. Files that we want Git to ignore are usually those automated generated log files and build files etc. This &lt;a href="https://git-scm.com/docs/gitignore"&gt;link&lt;/a&gt; provides more background about &lt;code&gt;.gitignore&lt;/code&gt; if you're interested.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Create a file &lt;code&gt;requirements.txt&lt;/code&gt; and save it to your folder &lt;code&gt;C:\Users\Dan\Anaconda3\envs\pelicantest&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Anaconda Python installation includes over &lt;a href="https://docs.continuum.io/anaconda/packages/pkg-docs"&gt;100 pre-built packages&lt;/a&gt;. So if you installed Anaconda Python distribution, copy and paste the following content into &lt;code&gt;requirements.txt&lt;/code&gt;. They are Python packages that you'll find useful when buidling websites but may be not included in Anaconda Python installation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;beautifulsoup4~=4.6.0&lt;/p&gt;
+&lt;p&gt;ghp-import~=0.5.5&lt;/p&gt;
+&lt;p&gt;gitpython~=2.1.5&lt;/p&gt;
+&lt;p&gt;html5lib~=0.999999999&lt;/p&gt;
+&lt;p&gt;Markdown~=2.6.8&lt;/p&gt;
+&lt;p&gt;Pygments~=2.2.0&lt;/p&gt;
+&lt;p&gt;pyreadline~=2.1&lt;/p&gt;
+&lt;p&gt;smartypants~=2.0.0&lt;/p&gt;
+&lt;p&gt;typogrify~=2.0.7&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;If you a different Python distribution other than Anaconda, copy and paste the following contents to `requirements.txt` instead, in case your installation doesn't cover these useful pacakges for website building. 
 
-&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;matplotlib&lt;/span&gt; inline
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;&lt;p&gt;beautifulsoup4~=4.6.0&lt;/p&gt;
+&lt;p&gt;Fabric3~=1.13.1.post1&lt;/p&gt;
+&lt;p&gt;feedgenerator~=1.9&lt;/p&gt;
+&lt;p&gt;ghp-import~=0.5.5&lt;/p&gt;
+&lt;p&gt;gitpython~2.1.5&lt;/p&gt;
+&lt;p&gt;html5lib~=0.999999999&lt;/p&gt;
+&lt;p&gt;jupyter~=1.0.0&lt;/p&gt;
+&lt;p&gt;ipython~=6.1.0&lt;/p&gt;
+&lt;p&gt;Markdown~=2.6.8&lt;/p&gt;
+&lt;p&gt;matplotlib~=2.0.2&lt;/p&gt;
+&lt;p&gt;nbconvert~=5.2.1&lt;/p&gt;
+&lt;p&gt;pelican~=3.7.1&lt;/p&gt;
+&lt;p&gt;Pygments~=2.2.0&lt;/p&gt;
+&lt;p&gt;pyreadline~=2.1&lt;/p&gt;
+&lt;p&gt;smartypants~=2.0.0&lt;/p&gt;
+&lt;p&gt;typogrify~=2.0.7&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;If you're interested in the latest version of these Python packages, go to this [site](https://pypi.python.org/pypi) and search for the package you'd like to update. It also explains what a package is for.
 
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hist&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;
-&lt;div class="prompt output_prompt"&gt;Out[4]:&lt;/div&gt;
-&lt;div class="output_text output_subarea output_execute_result"&gt;
-&lt;pre&gt;(array([ 2.,  1.,  1.,  0.,  2.,  0.,  1.,  0.,  0.,  2.]),
- array([  1. ,   1.9,   2.8,   3.7,   4.6,   5.5,   6.4,   7.3,   8.2,
-          9.1,  10. ]),
- &lt;a list of 10 patch objects&gt;)&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_area"&gt;
-&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_png output_subarea "&gt;
-&lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXcAAAEACAYAAABI5zaHAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
-AAALEgAACxIB0t1+/AAADOtJREFUeJzt3H+o3fV9x/HnK4syO1FWoZGZGVer3Sp0WRlWJ8Mz+keN
-ZWZ/lNVacLVQpKtoVxhtXSHJf9tgDF0tGmallrpK3agZ/pgTeykKFX9lSjVtpExjOjOGhqKRzR/v
-/XGP4e56k3Ny7zn39L73fMCB8+PD97y/ucnzfs/35ntTVUiSelk36wEkSZNn3CWpIeMuSQ0Zd0lq
-yLhLUkPGXZIaGhn3JBuTPJDkR0meSnL1EdZdn2Rvkt1JNk9+VEnSuNaPseYN4ItVtTvJicBjSe6r
-qj1vL0iyBTizqs5K8mHgRuC86YwsSRpl5JF7Vb1YVbuH918BngFOW7RsK3DrcM3DwMlJNkx4VknS
-mI7pnHuSM4DNwMOLXjoN2Lfg8X7e+Q1AkrRKxo778JTMHcA1wyN4SdIvqHHOuZNkPfNh/1ZV3bnE
-kv3Ary94vHH43OLt+ItsJGkZqirHsn7cI/dvAE9X1XVHeH0XcDlAkvOAg1V14AgDrsrtpptu4oQT
-PgvUFG93cf75Ww6/57Zt21Zt/2Zxm8T+Df8WTPm2vL9nnb9+s9y3X+Sv+Vq5LcfII/ckFwCfAp5K
-8sTwT/JaYNP8n2ftrKq7k1yc5FngVeCKZU0jSZqIkXGvqoeAXxpj3VUTmUiStGJeoTpBg8Fg1iNM
-lfu3dnXeNy3NuE9Q939A7t/a1XnftDTjLkkNGXdJasi4S1JDxl2SGjLuktSQcZekhoy7JDVk3CWp
-IeMuSQ0Zd0lqyLhLUkPGXZIaMu6S1JBxl6SGjLskNWTcJakh4y5JDRl3SWrIuEtSQ8Zdkhoy7pLU
-kHGXpIaMuyQ1ZNwlqSHjLkkNGXdJasi4S1JDxl2SGjLuktSQcZekhoy7JDVk3CWpIeMuSQ0Zd0lq
-yLhLUkPGXZIaMu6S1JBxl6SGjLskNWTcJakh4y5JDRl3SWrIuEtSQ8Zdkhoy7pLU0Mi4J7k5yYEk
-Tx7h9QuTHEzy+PD21cmPKUk6FuvHWHML8HfArUdZ84OqumQyI0mSVmrkkXtVPQi8PGJZJjOOJGkS
-JnXO/fwku5PcleQDE9qmJGmZxjktM8pjwOlVdSjJFuB7wNlHWrx9+/bD9weDAYPBYAIjSFIfc3Nz
-zM3NrWgbK457Vb2y4P49Sb6e5N1V9dJS6xfGXZL0TosPfHfs2HHM2xj3tEw4wnn1JBsW3D8XyJHC
-LklaHSOP3JPcBgyAU5I8D2wDjgeqqnYCH0/yOeB14DXgE9MbV5I0jpFxr6rLRrx+A3DDxCaSJK2Y
-V6hKUkPGXZIaMu6S1JBxl6SGjLskNWTcJakh4y5JDRl3SWrIuEtSQ8Zdkhoy7pLUkHGXpIaMuyQ1
-ZNwlqSHjLkkNGXdJasi4S1JDxl2SGjLuktSQcZekhoy7JDVk3CWpIeMuSQ0Zd0lqyLhLUkPGXZIa
-Mu6S1JBxl6SGjLskNWTcJakh4y5JDRl3SWrIuEtSQ8Zdkhoy7pLUkHGXpIaMuyQ1ZNwlqSHjLkkN
-GXdJasi4S1JDxl2SGjLuktSQcZekhoy7JDVk3CWpIeMuSQ2NjHuSm5McSPLkUdZcn2Rvkt1JNk92
-REnSsRrnyP0W4KNHejHJFuDMqjoLuBK4cUKzSZKWaWTcq+pB4OWjLNkK3Dpc+zBwcpINkxlPkrQc
-kzjnfhqwb8Hj/cPnJEkzsn6133D79u2H7w8GAwaDwWqPMFGPPvoQSab6HuvWvYu33jo01ffYsGET
-L77471N9j05OPfUMDhx4bqrv4dfk/6+5uTnm5uZWtI1U1ehFySbgn6vqg0u8diPw/aq6ffh4D3Bh
-VR1YYm2N836TsHPnTr7whUd57bWdU3yXu4GPAdPep6zKe6zG12b+G+Ha35cu+7Ea/LNauSRU1TEd
-RY57WibD21J2AZcPBzgPOLhU2CVJq2fkaZkktwED4JQkzwPbgOOBqqqdVXV3kouTPAu8ClwxzYEl
-SaONjHtVXTbGmqsmM44kaRK8QlWSGjLuktSQcZekhoy7JDVk3CWpIeMuSQ0Zd0lqyLhLUkPGXZIa
-Mu6S1JBxl6SGjLskNWTcJakh4y5JDRl3SWrIuEtSQ8Zdkhoy7pLUkHGXpIaMuyQ1ZNwlqSHjLkkN
-GXdJasi4S1JDxl2SGjLuktSQcZekhoy7JDVk3CWpIeMuSQ0Zd0lqyLhLUkPGXZIaMu6S1JBxl6SG
-jLskNWTcJakh4y5JDRl3SWrIuEtSQ8Zdkhoy7pLUkHGXpIaMuyQ1ZNwlqSHjLkkNGXdJamisuCe5
-KMmeJD9J8qUlXr8wycEkjw9vX538qJKkca0ftSDJOuBrwEeAnwGPJLmzqvYsWvqDqrpkCjNKko7R
-OEfu5wJ7q+q5qnod+A6wdYl1mehkkqRlGyfupwH7Fjx+YfjcYucn2Z3kriQfmMh0kqRlGXlaZkyP
-AadX1aEkW4DvAWcvtXD79u2H7w8GAwaDwYRGkKQe5ubmmJubW9E2xon7fuD0BY83Dp87rKpeWXD/
-niRfT/Luqnpp8cYWxl2S9E6LD3x37NhxzNsY57TMI8D7kmxKcjxwKbBr4YIkGxbcPxfIUmGXJK2O
-kUfuVfVmkquA+5j/ZnBzVT2T5Mr5l2sn8PEknwNeB14DPjHNoSVJRzfWOfequhd4/6Lnblpw/wbg
-hsmOJklaLq9QlaSGjLskNWTcJakh4y5JDRl3SWrIuEtSQ8Zdkhoy7pLUkHGXpIaMuyQ1ZNwlqSHj
-LkkNGXdJasi4S1JDxl2SGjLuktSQcZekhoy7JDVk3CWpIeMuSQ0Zd0lqyLhLUkPGXZIaMu6S1JBx
-l6SGjLskNWTcJakh4y5JDRl3SWrIuEtSQ8Zdkhoy7pLUkHGXpIaMuyQ1ZNwlqSHjLkkNGXdJasi4
-S1JDxl2SGjLuktSQcZekhoy7JDVk3CWpIeMuSQ0Zd0lqyLhLUkNjxT3JRUn2JPlJki8dYc31SfYm
-2Z1k82THlCQdi5FxT7IO+BrwUeAc4JNJfnPRmi3AmVV1FnAlcOMUZl0D5mY9wFTNzc3NeoSp6rx/
-nfdNSxvnyP1cYG9VPVdVrwPfAbYuWrMVuBWgqh4GTk6yYaKTrglzsx5gqroHovP+dd43LW2cuJ8G
-7Fvw+IXhc0dbs3+JNZKkVbJ+1gNMy3HHHUfVvZx00h9O7T3eeOMAhw5NbfOStGypqqMvSM4DtlfV
-RcPHXwaqqv5qwZobge9X1e3Dx3uAC6vqwKJtHf3NJElLqqocy/pxjtwfAd6XZBPwH8ClwCcXrdkF
-fB64ffjN4ODisC9nOEnS8oyMe1W9meQq4D7mz9HfXFXPJLly/uXaWVV3J7k4ybPAq8AV0x1bknQ0
-I0/LSJLWnlW7QnWcC6HWqiQbkzyQ5EdJnkpy9axnmrQk65I8nmTXrGeZtCQnJ/lukmeGX8MPz3qm
-SUryleF+PZnk20mOn/VMK5Hk5iQHkjy54LlfTXJfkh8n+ZckJ89yxpU4wv799fDv5+4k/5jkpFHb
-WZW4j3Mh1Br3BvDFqjoHOB/4fLP9A7gGeHrWQ0zJdcDdVfVbwG8Dz8x4nokZ/qzss8DvVNUHmT8V
-e+lsp1qxW5hvyUJfBu6vqvcDDwBfWfWpJmep/bsPOKeqNgN7GWP/VuvIfZwLodasqnqxqnYP77/C
-fBza/D//JBuBi4G/n/UskzY8Avr9qroFoKreqKqfz3isSfo58D/AryRZD7wL+NlsR1qZqnoQeHnR
-01uBbw7vfxP4o1UdaoKW2r+qur+q3ho+/CGwcdR2Vivu41wI1UKSM4DNwMOznWSi/hb4c6DjD2h+
-A/ivJLcMTzvtTHLCrIealKp6Gfgb4HnmLy48WFX3z3aqqXjP2/9Dr6peBN4z43mm6TPAPaMW+Vsh
-JyjJicAdwDXDI/g1L8nHgAPDTyYZ3jpZD3wIuKGqPgQcYv4jfgtJ3gv8GbAJ+DXgxCSXzXaqVdHx
-QIQkfwG8XlW3jVq7WnHfD5y+4PHG4XNtDD/y3gF8q6runPU8E3QBcEmSnwL/APxBkltnPNMkvQDs
-q6pHh4/vYD72Xfwu8FBVvVRVbwL/BPzejGeahgNv/z6rJKcC/znjeSYuyaeZPz061jfn1Yr74Quh
-hj+pv5T5C586+QbwdFVdN+tBJqmqrq2q06vqvcx/3R6oqstnPdekDD/K70ty9vCpj9DrB8c/Bs5L
-8stJwvz+dfiB8eJPkbuATw/v/wmw1g+w/s/+JbmI+VOjl1TVf4+zgVX53TJHuhBqNd57NSS5APgU
-8FSSJ5j/SHhtVd0728k0pquBbyc5DvgpjS7Cq6p/G37Segx4E3gC2DnbqVYmyW3AADglyfPANuAv
-ge8m+QzwHPDHs5twZY6wf9cCxwP/Ov89mh9W1Z8edTtexCRJ/fgDVUlqyLhLUkPGXZIaMu6S1JBx
-l6SGjLskNWTcJakh4y5JDf0vZB9FlJ1A1boAAAAASUVORK5CYII=
-" /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Execute the following command in Windows command shell to install Python packages listed in &lt;code&gt;requirements.txt&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;(pelicantest) D:\TDSblog&gt;pip install -r C:\Users\Dan\Anaconda3\envs\pelicantest\requirements.txt&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;To double check whether the installation is successful, execute the following commands. It'll show all the Python packages installed so far and you should be able to find those listed in `requirements.txt`.
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;&lt;p&gt;(pelicantest) D:\TDSblog&gt;pip list&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="Create-a-Default-Website"&gt;Create a Default Website&lt;a class="anchor-link" href="#Create-a-Default-Website"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;With the virtual environment set up and Python packages installed, we can now start setting up the website in the default style.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Execute the the following command to start the initial setup of your website&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;(pelicantest) D:\TDSblog&gt;pelican-quickstart&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;The following questions will pop up in the Windows command shell. For the initial setup, you can press &lt;code&gt;enter&lt;/code&gt; for majority of questions, except the ones asking you about the website title, author name, default language, whether to specify a URL prefix, and time zone.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;Where do you want to create your new web site? [.]&lt;/p&gt;
+&lt;p&gt;What will be the title of this web site? Superduper Blog&lt;/p&gt;
+&lt;p&gt;Who will be the author of this web site? Superduper Writer&lt;/p&gt;
+&lt;p&gt;What will be the default language of this web site? [en]&lt;/p&gt;
+&lt;p&gt;Do you want to specify a URL prefix? e.g., &lt;a href="http://example.com"&gt;http://example.com&lt;/a&gt;   (Y/n) n&lt;/p&gt;
+&lt;p&gt;Do you want to enable article pagination? (Y/n)&lt;/p&gt;
+&lt;p&gt;How many articles per page do you want? [10]&lt;/p&gt;
+&lt;p&gt;What is your time zone? [Europe/Paris] America/New York&lt;/p&gt;
+&lt;p&gt;Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n)&lt;/p&gt;
+&lt;p&gt;Do you want an auto-reload &amp; simpleHTTP script to assist with theme and site development? (Y/n)&lt;/p&gt;
+&lt;p&gt;Do you want to upload your website using FTP? (y/N)&lt;/p&gt;
+&lt;p&gt;Do you want to upload your website using SSH? (y/N)&lt;/p&gt;
+&lt;p&gt;Do you want to upload your website using Dropbox? (y/N)&lt;/p&gt;
+&lt;p&gt;Do you want to upload your website using S3? (y/N)&lt;/p&gt;
+&lt;p&gt;Do you want to upload your website using Rackspace Cloud Files? (y/N)&lt;/p&gt;
+&lt;p&gt;Do you want to upload your website using GitHub Pages? (y/N)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Upon completing these questions, some new files and sub folders will be automatically created in your folder, such as &lt;code&gt;content&lt;/code&gt; folder, &lt;code&gt;output&lt;/code&gt; folder, and &lt;code&gt;fabfile.py&lt;/code&gt;, &lt;code&gt;pelicanconf.py&lt;/code&gt;, and &lt;code&gt;publishconf.py&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;To view the content of your folder, run the following command:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;(pelicantest) D:\TDSblog&gt;dir&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;To view the structure of your folder, run the following command:
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;&lt;p&gt;(pelicantest) D:\TDSblog&gt;tree&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="Apply-Bootstrap3-Theme-and-Install-Plugins"&gt;Apply Bootstrap3 Theme and Install Plugins&lt;a class="anchor-link" href="#Apply-Bootstrap3-Theme-and-Install-Plugins"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;To get the look and feel of the default theme of Pelican-based website, check out &lt;a href="https://blog.getpelican.com/"&gt;this link&lt;/a&gt;. If you're interested in other Pelican themes, check out &lt;a href="https://github.com/getpelican/pelican-themes"&gt;this link&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In this guide, we'll use &lt;a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3"&gt;Bootstrap3&lt;/a&gt; as the website theme.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Execute the following command to set up your folder as a git repository:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;(pelicantest) D:\TDSblog&gt;git init&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Execute the following command to clone the Pelican themes repository to your local computer:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;(pelicantest) D:\TDSblog&gt;git clone &lt;a href="https://github.com/getpelican/pelican-themes/"&gt;https://github.com/getpelican/pelican-themes/&lt;/a&gt; themes&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Execute the following command to clone the Pelican plugins repository to your local computer: &lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;(pelicantest) D:\TDSblog&gt;git clone &lt;a href="https://github.com/getpelican/pelican-plugins"&gt;https://github.com/getpelican/pelican-plugins&lt;/a&gt; plugins&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Add the following information to the bottom of &lt;code&gt;pelicanconf.py&lt;/code&gt; in your folder and save. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;MARKUP = ('md', 'ipynb')&lt;/p&gt;
+&lt;p&gt;PLUGIN_PATHS = ['plugins']
+PLUGINS = ['ipynb.markup','i18n_subsites']&lt;/p&gt;
+&lt;p&gt;THEME = 'themes/pelican-bootstrap3'
+JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Execute the following command to add the Pelican plugins for Jupyter/IPython Notebooks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;(pelicantest) D:\TDSblog&gt;git submodule add git://github.com/danielfrg/pelican-ipynb.git plugins/ipynb&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Upon completing the steps above, you should have additional files and sub folders created in your folder, such as &lt;code&gt;themes&lt;/code&gt; folder, &lt;code&gt;plugins&lt;/code&gt; folder, and &lt;code&gt;.gitmodules&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;To view the content of your folder, run the following command:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;(pelicantest) D:\TDSblog&gt;dir&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;To view the structure of your folder, run the following command:
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;&lt;p&gt;(pelicantest) D:\TDSblog&gt;tree&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="Write-the-First-Blog-Post"&gt;Write the First Blog Post&lt;a class="anchor-link" href="#Write-the-First-Blog-Post"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Once you complete installing the Pelican themes and plugins, you can start writing your first blog post using the Jupyter Notebook interface.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a Jupyter Notebook (a &lt;code&gt;.ipynb&lt;/code&gt; file) with any content you'd like and save it to the &lt;code&gt;content&lt;/code&gt; folder. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you're not familiar with Jupyter Notebook, you can download a quick example of &lt;code&gt;.ipynb&lt;/code&gt; from &lt;a href=""&gt;here&lt;/a&gt; and save it to your &lt;code&gt;content&lt;/code&gt; folder.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Check out &lt;a href="http://jupyter.org/"&gt;this link&lt;/a&gt; for more information about what Jupyter Notebook is about&lt;/li&gt;
+&lt;li&gt;Check out &lt;a href="https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks"&gt;this link&lt;/a&gt; for a gallary of interesting Jupyter Notebooks&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Check out &lt;a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code"&gt;this link&lt;/a&gt; for the Markdown Syntax&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Create a new file with the same name as &lt;code&gt;.ipynb&lt;/code&gt; file but with extension &lt;code&gt;.ipynb-meta&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Enter the following content into the &lt;code&gt;.ipynb-meta&lt;/code&gt; file and save it to your &lt;code&gt;content&lt;/code&gt; folder.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;Title:&lt;/p&gt;
+&lt;p&gt;Slug:&lt;/p&gt;
+&lt;p&gt;Date:&lt;/p&gt;
+&lt;p&gt;Category:&lt;/p&gt;
+&lt;p&gt;Tags:&lt;/p&gt;
+&lt;p&gt;Author:&lt;/p&gt;
+&lt;p&gt;Summary:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;For example, the Jupyter Notebook I created is &lt;code&gt;first-post.ipynb&lt;/code&gt; and the metadata file I created is &lt;code&gt;first-post.ipynb-meta&lt;/code&gt; with the following content:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Title: First Post&lt;/p&gt;
+&lt;p&gt;Slug: first-post&lt;/p&gt;
+&lt;p&gt;Date: 2017-07-09 15:00&lt;/p&gt;
+&lt;p&gt;Category: posts&lt;/p&gt;
+&lt;p&gt;Tags: Pelican Python GitHub Jupyter&lt;/p&gt;
+&lt;p&gt;Author: Superduper Writer&lt;/p&gt;
+&lt;p&gt;Summary: First blog post on Superduper Blog&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;.ipynb&lt;/code&gt; and &lt;code&gt;.ipynb-meta&lt;/code&gt; should be in pairs in the &lt;code&gt;content&lt;/code&gt; folder when adding a new post. &lt;code&gt;.ipynb&lt;/code&gt; provides the content of your post, such as the charts, words, code etc. and &lt;code&gt;.ipynb-meta&lt;/code&gt; provides the metadata of your post.&lt;/p&gt;
+&lt;h2 id="Generate-HTML-Files"&gt;Generate HTML Files&lt;a class="anchor-link" href="#Generate-HTML-Files"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Now you've completed writing the first post and its metadata, we'll generate HTML files and preview the blog before posting it to GitHub. Before starting the following steps, make sure you're still under the main folder, not under &lt;code&gt;content&lt;/code&gt;. If not, run &lt;code&gt;pushd yourfolder&lt;/code&gt; in the Windows command shell. In my case, I run &lt;code&gt;pushd D:\TDSblog&lt;/code&gt; instead.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Run the following command to generate HTML files&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;(pelicantest) D:\TDSblog&gt;pelican content&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to the &lt;code&gt;output&lt;/code&gt; folder by executing the following command&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;(pelicantest) D:\TDSblog&gt;cd output&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Run the following command to post your blog to local server&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;(pelicantest) D:\TDSblog&gt;python -m pelican.server&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Preview the blog by visiting &lt;code&gt;localhost:8000&lt;/code&gt; using your internet browser. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="Set-Up-GitHub-Pages"&gt;Set Up GitHub Pages&lt;a class="anchor-link" href="#Set-Up-GitHub-Pages"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Signing up a GitHub account is one of the prerequisites. Once you have a GitHub account, you can follow steps below to set up your website hosted by GitHub on the domain of GitHub.io.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a repository named as &lt;code&gt;username.github.io&lt;/code&gt; where &lt;code&gt;username&lt;/code&gt; is the name of your GitHub account. This &lt;a href="https://help.github.com/articles/create-a-repo/"&gt;link&lt;/a&gt; provides more details about how to set up a repository on GitHub. Follow steps under the &lt;code&gt;Create A Repo&lt;/code&gt; section.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You'll have two options:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A free account with your files visible to any GitHub users&lt;/li&gt;
+&lt;li&gt;A paid private account&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For now, you can start with the free one to set up the bone of your blog. You can upgrade it to paid later on if you'd like.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Run the following command to add the new remote repository you just created for your local git repository. Replace &lt;code&gt;username&lt;/code&gt; with the name of your GitHub account. Note that you need to run the command under the main folder where your blog files sit.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;(pelicantest) D:\TDSblog&gt;git remote add origin git@github.com:username/username.github.io.git&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Update &lt;code&gt;SITEURL&lt;/code&gt; in &lt;code&gt;publishconf.py&lt;/code&gt; in your local folder, by setting &lt;code&gt;SITEURL&lt;/code&gt; to &lt;code&gt;https://username.github.io&lt;/code&gt;. Replace &lt;code&gt;username&lt;/code&gt; with the name of your GitHub account.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Run the following command to configure Pelican settings in &lt;code&gt;publishconf.py&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;(pelicantest) D:\TDSblog&gt;pelican content -s publishconf.py&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Run the following command from your main folder in order to import the content of &lt;code&gt;output&lt;/code&gt; folder to the master branch&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;(pelicantest) D:\TDSblog&gt;ghp-import output -b master&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Run the following command from your main folder in order to push the content to GitHub&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;(pelicantest) D:\TDSblog&gt;git push origin master&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Visit &lt;code&gt;https://username.github.io&lt;/code&gt; with &lt;code&gt;username&lt;/code&gt; replaced by the name of your GitHub account. You should see your blog running on the GitHub.io domain. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you make any additional edits to the first post of your blog, follow the steps as below and your GitHub Pages will be updated accordingly:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Save the updated &lt;code&gt;.ipynb&lt;/code&gt; and &lt;code&gt;.ipynb-meta&lt;/code&gt; file in your &lt;code&gt;content&lt;/code&gt; folder and keep both file names the same, except for extensions&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;pelican content -s publishconf.py&lt;/code&gt; in the root of the local repository&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;ghp-import output -b master&lt;/code&gt; in the root of the local repository&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;git push origin master&lt;/code&gt; in the root of the local repository&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If you'd like to use a custom domain, i.e. not the GitHub.io domain, check out &lt;a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/"&gt;this link&lt;/a&gt; for additional information.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1148,4 +1330,4 @@ l6SGjLskNWTcJakh4y5JDf0vZB9FlJ1A1boAAAAASUVORK5CYII=
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="python first"></category></entry></feed>
+</content><category term="Python"></category><category term="GitHub"></category><category term="Pelican"></category><category term="Jupyter Notebook"></category></entry></feed>

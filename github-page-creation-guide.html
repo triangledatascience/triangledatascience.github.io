@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="english" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>First Post - Triangle Data Science</title>
+    <title>Guide to Creating GitHub Pages using Python and Jupyter Notebook - Triangle Data Science</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -9,20 +9,23 @@
 
 
 
-<link rel="canonical" href="https://triangledatascience.github.io/first-post.html">
+<link rel="canonical" href="https://triangledatascience.github.io/github-page-creation-guide.html">
 
         <meta name="author" content="Dan" />
-        <meta name="keywords" content="python first" />
-        <meta name="description" content="First post!¶This will be the first post in our new Pelican blog! You can add any code or markdown cells to this Jupyter notebook, and they will be rendered on your blog." />
+        <meta name="keywords" content="Python,GitHub,Pelican,Jupyter Notebook" />
+        <meta name="description" content="A Beginner&#39;s Guide to Creating a Blog¶Using Python, GitHub, Pelican, and Jupyter Notebook¶ So you want to create a blog? Congratulations that you finally decided to take the first step! In this guide, I will walk you through step-by-step how to create a blog on GitHub.io. The good news is that all the tools used in this process are free:) At the end of the guide, you should be able to:" />
 
         <meta property="og:site_name" content="Triangle Data Science" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="First Post"/>
-        <meta property="og:url" content="https://triangledatascience.github.io/first-post.html"/>
-        <meta property="og:description" content="First post!¶This will be the first post in our new Pelican blog! You can add any code or markdown cells to this Jupyter notebook, and they will be rendered on your blog."/>
-        <meta property="article:published_time" content="2017-07-03" />
+        <meta property="og:title" content="Guide to Creating GitHub Pages using Python and Jupyter Notebook"/>
+        <meta property="og:url" content="https://triangledatascience.github.io/github-page-creation-guide.html"/>
+        <meta property="og:description" content="A Beginner&#39;s Guide to Creating a Blog¶Using Python, GitHub, Pelican, and Jupyter Notebook¶ So you want to create a blog? Congratulations that you finally decided to take the first step! In this guide, I will walk you through step-by-step how to create a blog on GitHub.io. The good news is that all the tools used in this process are free:) At the end of the guide, you should be able to:"/>
+        <meta property="article:published_time" content="2017-12-10" />
             <meta property="article:section" content="posts" />
-            <meta property="article:tag" content="python first" />
+            <meta property="article:tag" content="Python" />
+            <meta property="article:tag" content="GitHub" />
+            <meta property="article:tag" content="Pelican" />
+            <meta property="article:tag" content="Jupyter Notebook" />
             <meta property="article:author" content="Dan" />
 
 
@@ -77,10 +80,10 @@ Triangle Data Science            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="https://triangledatascience.github.io/first-post.html"
+                    <a href="https://triangledatascience.github.io/github-page-creation-guide.html"
                        rel="bookmark"
-                       title="Permalink to First Post">
-                        First Post
+                       title="Permalink to Guide to Creating GitHub Pages using Python and Jupyter Notebook">
+                        Guide to Creating GitHub Pages using Python and Jupyter Notebook
                     </a>
                 </h1>
             </header>
@@ -90,7 +93,7 @@ Triangle Data Science            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-07-03T13:46:00-04:00"> Mon 03 July 2017</time>
+        <i class="fa fa-calendar"></i><time datetime="2017-12-10T15:10:00-05:00"> Sun 10 December 2017</time>
     </span>
 
 
@@ -98,7 +101,13 @@ Triangle Data Science            </a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="https://triangledatascience.github.io/tag/python-first.html">python first</a>
+	<a href="https://triangledatascience.github.io/tag/python.html">Python</a>
+        /
+	<a href="https://triangledatascience.github.io/tag/github.html">GitHub</a>
+        /
+	<a href="https://triangledatascience.github.io/tag/pelican.html">Pelican</a>
+        /
+	<a href="https://triangledatascience.github.io/tag/jupyter-notebook.html">Jupyter Notebook</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
@@ -1079,135 +1088,319 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="First-post!">First post!<a class="anchor-link" href="#First-post!">¶</a></h1><p>This will be the first post in our new Pelican blog! You can add any code or markdown cells to this Jupyter notebook, and they will be rendered on your blog.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [2]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<h1 id="A-Beginner's-Guide-to-Creating-a-Blog">A Beginner's Guide to Creating a Blog<a class="anchor-link" href="#A-Beginner's-Guide-to-Creating-a-Blog">¶</a></h1><h3 id="Using-Python,-GitHub,-Pelican,-and-Jupyter-Notebook">Using Python, GitHub, Pelican, and Jupyter Notebook<a class="anchor-link" href="#Using-Python,-GitHub,-Pelican,-and-Jupyter-Notebook">¶</a></h3><hr />
+<p>So you want to create a blog?</p>
+<p>Congratulations that you finally decided to take the first step!</p>
+<p>In this guide, I will walk you through step-by-step how to create a blog on GitHub.io. The good news is that all the tools used in this process are free:) At the end of the guide, you should be able to:</p>
+<ul>
+<li>Create a blog on GitHub.io </li>
+<li>Set up the initial look and feel for the blog using Pelican Bootstrap3 theme</li>
+<li>Write your first post using Jupyter Notebook and Markdown</li>
+</ul>
+<p>I'm using Windows to demonstrate the steps. There could be some differences if you use a different OS but the general steps should be quite similar.</p>
+<h2 id="Prerequisites">Prerequisites<a class="anchor-link" href="#Prerequisites">¶</a></h2><p>Before we get into the business of creating a blog, let's make sure you have a couple of things ready:</p>
+<ul>
+<li>Python 3 or Python 2.7 set up on your computer (I have Python 3 on my computer but it's fine if you prefer Python 2.7)</li>
+<li>A GitHub account</li>
+</ul>
+<p>If you have both, feel free to skip this section and move to <code>Virtual Environment Setup</code>.</p>
+<p>If you don't have Python 3 or Python 2.7 on your computer, I highly recommend you to use <code>Anaconda Python installation</code>, <em>especially</em> if you work or are interested in working in the field of data science. Anaconda Python installation covers hundreds of packages that you'll find useful when doing analytics. It also includes <code>Jupyter Notebook</code> installatioin which we'll use to build your first blog post.</p>
+<p>Anaconda Python installation is pretty painless, you need to:</p>
+<ul>
+<li>Download the installer from <a href="https://www.continuum.io/downloads">this website</a> </li>
+<li>Run the .exe downloaded and follow instructions on the screen </li>
+</ul>
+<p>I installed Anaconda Python distribution to the default path <code>C:\Users\Dan\Anaconda3</code>. The version of installer you should download depends on:</p>
+<ul>
+<li>Whether your computer is 64-Bit or 32-Bit (mine is 64-Bit)</li>
+<li>Whether you prefer to install Python 3 or Python 2.7 (I installed Python 3)</li>
+</ul>
+<p>Once Python installation is completed, double check whether the installation is successful by executing <code>conda info --all</code> in the Windows command shell.</p>
+<p>If you're not familiar windows command shell, you basically need to:</p>
+<ol>
+<li>Click on the Windows start button</li>
+<li>Enter <code>CMD</code> in the search box and hit enter</li>
+<li>Click on <code>Command Prompt</code> in the search results and a black window would pop up</li>
+<li>Enter <code>conda info --all</code> into the black window and hit enter</li>
+</ol>
+<p>Regarding the GitHub account, if you don't have one, just go to <a href="https://github.com/">GitHub</a> and sign it up using your email address. It's quite straightforward.</p>
+<h2 id="Set-Up-a-Virtual-Environment-Setup">Set Up a Virtual Environment Setup<a class="anchor-link" href="#Set-Up-a-Virtual-Environment-Setup">¶</a></h2><p>Virtual environment is a tool to create isolated environment independent of the main Python distribution on your computer. Each time when you start a Python project, it's recommended to create an isolated environment for the project, so that you can avoid problem of one project requring version 123 of a Python library but another project requiring version 456 instead. Setting up your blog is a new project and you should set up a virtual environment just for it.</p>
+<ul>
+<li>With <code>Anaconda Python installation</code> completed, you can now use conda to set up a virtual environment by executing <code>conda create -n yourenvname python=x.x anaconda</code> in the Windows command shell. <code>yourenvname</code> can be replaced with anything that you'd like to name your virtual environment. In my case, I called my virtual environment <code>pelicantest</code>.</li>
+</ul>
+<ul>
+<li>Upon executing <code>conda create -n yourenvname python=x.x anaconda</code>, you'll be prompted to confirm whether you'd like to proceed. Press <code>y</code> to proceed. </li>
+</ul>
+<ul>
+<li>To <code>activate</code> your virtual environment, execute <code>activate yourenvname</code> in the Windows command shell.</li>
+</ul>
+<blockquote><p>C:\Users\Dan>activate pelicantest</p>
+</blockquote>
+<pre><code>And you should see `(yourenvname)` appears as the leading string in the next line in the Windows command shell.
 
-<span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[2]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>4</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [4]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</code></pre>
+<blockquote><p>(pelicantest) C:\Users\Dan></p>
+</blockquote>
+<p>Upon successfully set up the virtual environment, a new folder <code>pelicantest</code> appears under <code>C:\Users\Dan\Anaconda3\envs\</code>.</p>
+<p>Some of you may have a different Python distribution other than Anaconda. In that case, you can set up <code>virtualenv</code> and activate it by following instructions <a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">here</a>.</p>
+<h2 id="Install-Pelican-and-Python-Packages">Install Pelican and Python Packages<a class="anchor-link" href="#Install-Pelican-and-Python-Packages">¶</a></h2><p>Pelican is one of the most popular <code>static site generators</code>. Static site generators free you from manually editing HTML files. With their help, you can focus on:</p>
+<ul>
+<li>Create and edit content of your website in extremely simple format, e.g. in <code>Markdown</code> or other <code>markup languages</code></li>
+<li>Manage and update the <code>theme</code> of your website by coding the template files</li>
+</ul>
+<p>Static site generators can automatically convert your Markdown files and template files into HTML. Isn't that great?!</p>
+<p>There are a few popular static site generators:</p>
+<ul>
+<li><a href="http://jekyllrb.com/">Jekyll</a> written in <code>Ruby</code></li>
+<li><a href="https://blog.getpelican.com/">Pelican</a> written in <code>Python</code></li>
+<li><a href="http://www.metalsmith.io/">Metalsmith</a> written in <code>JavaScript</code></li>
+</ul>
+<p>Since this guide is about using Python to create the website, we pick Pelican as our static site generator. With Pelican, we can also enable <code>Jupyter Notebook</code> integration by adding it as a <code>plug-in</code> which we'll discuss it later.</p>
+<p>If you're interested in comparing pros and cons of these three static site genertors, this <a href="http://blog.formkeep.com/not-sure-which-static-site-generator-to-pick/">link</a> provides more details.</p>
+<p>Now follow the steps below to install Pelican and other Python packages to your Python virtual environment.</p>
+<ul>
+<li>Create a folder on your computer to store content and templates of your website. Name it anything you'd like. In my case, I created a folder <code>TDSblog</code> on <code>D:\</code> drive. </li>
+</ul>
+<ul>
+<li>Enter your newly created folder using following command in the Windows command shell. Note that my virtual environment is active since its names leads the command line. </li>
+</ul>
+<blockquote><p>(pelicantest) C:\Users\Dan>pushd D:\TDSblog</p>
+</blockquote>
+<ul>
+<li>Upon entering your new folder, you should see following in your Windows command shell</li>
+</ul>
+<blockquote><p>(pelicantest) D:\TDSblog></p>
+</blockquote>
+<ul>
+<li><p>Create a file <code>.gitignore</code> with content on this <a href="https://github.com/github/gitignore/blob/master/Python.gitignore">page</a> and save <code>.gitignore</code> in your new folder.</p>
+<p>It tells Git to ignore files of certain types when pushing content from local computer to remote repository later. Files that we want Git to ignore are usually those automated generated log files and build files etc. This <a href="https://git-scm.com/docs/gitignore">link</a> provides more background about <code>.gitignore</code> if you're interested.</p>
+</li>
+</ul>
+<ul>
+<li><p>Create a file <code>requirements.txt</code> and save it to your folder <code>C:\Users\Dan\Anaconda3\envs\pelicantest</code>.</p>
+<p>Anaconda Python installation includes over <a href="https://docs.continuum.io/anaconda/packages/pkg-docs">100 pre-built packages</a>. So if you installed Anaconda Python distribution, copy and paste the following content into <code>requirements.txt</code>. They are Python packages that you'll find useful when buidling websites but may be not included in Anaconda Python installation.</p>
+</li>
+</ul>
+<blockquote><p>beautifulsoup4~=4.6.0</p>
+<p>ghp-import~=0.5.5</p>
+<p>gitpython~=2.1.5</p>
+<p>html5lib~=0.999999999</p>
+<p>Markdown~=2.6.8</p>
+<p>Pygments~=2.2.0</p>
+<p>pyreadline~=2.1</p>
+<p>smartypants~=2.0.0</p>
+<p>typogrify~=2.0.7</p>
+</blockquote>
+<pre><code>If you a different Python distribution other than Anaconda, copy and paste the following contents to `requirements.txt` instead, in case your installation doesn't cover these useful pacakges for website building. 
 
-<span class="o">%</span><span class="k">matplotlib</span> inline
+</code></pre>
+<blockquote><p>beautifulsoup4~=4.6.0</p>
+<p>Fabric3~=1.13.1.post1</p>
+<p>feedgenerator~=1.9</p>
+<p>ghp-import~=0.5.5</p>
+<p>gitpython~2.1.5</p>
+<p>html5lib~=0.999999999</p>
+<p>jupyter~=1.0.0</p>
+<p>ipython~=6.1.0</p>
+<p>Markdown~=2.6.8</p>
+<p>matplotlib~=2.0.2</p>
+<p>nbconvert~=5.2.1</p>
+<p>pelican~=3.7.1</p>
+<p>Pygments~=2.2.0</p>
+<p>pyreadline~=2.1</p>
+<p>smartypants~=2.0.0</p>
+<p>typogrify~=2.0.7</p>
+</blockquote>
+<pre><code>If you're interested in the latest version of these Python packages, go to this [site](https://pypi.python.org/pypi) and search for the package you'd like to update. It also explains what a package is for.
 
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[4]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>(array([ 2.,  1.,  1.,  0.,  2.,  0.,  1.,  0.,  0.,  2.]),
- array([  1. ,   1.9,   2.8,   3.7,   4.6,   5.5,   6.4,   7.3,   8.2,
-          9.1,  10. ]),
- <a list of 10 patch objects>)</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-" />
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
+</code></pre>
+<ul>
+<li>Execute the following command in Windows command shell to install Python packages listed in <code>requirements.txt</code></li>
+</ul>
+<blockquote><p>(pelicantest) D:\TDSblog>pip install -r C:\Users\Dan\Anaconda3\envs\pelicantest\requirements.txt</p>
+</blockquote>
+<pre><code>To double check whether the installation is successful, execute the following commands. It'll show all the Python packages installed so far and you should be able to find those listed in `requirements.txt`.
+
+</code></pre>
+<blockquote><p>(pelicantest) D:\TDSblog>pip list</p>
+</blockquote>
+<h2 id="Create-a-Default-Website">Create a Default Website<a class="anchor-link" href="#Create-a-Default-Website">¶</a></h2><p>With the virtual environment set up and Python packages installed, we can now start setting up the website in the default style.</p>
+<ul>
+<li>Execute the the following command to start the initial setup of your website</li>
+</ul>
+<blockquote><p>(pelicantest) D:\TDSblog>pelican-quickstart</p>
+</blockquote>
+<ul>
+<li>The following questions will pop up in the Windows command shell. For the initial setup, you can press <code>enter</code> for majority of questions, except the ones asking you about the website title, author name, default language, whether to specify a URL prefix, and time zone.</li>
+</ul>
+<blockquote><p>Where do you want to create your new web site? [.]</p>
+<p>What will be the title of this web site? Superduper Blog</p>
+<p>Who will be the author of this web site? Superduper Writer</p>
+<p>What will be the default language of this web site? [en]</p>
+<p>Do you want to specify a URL prefix? e.g., <a href="http://example.com">http://example.com</a>   (Y/n) n</p>
+<p>Do you want to enable article pagination? (Y/n)</p>
+<p>How many articles per page do you want? [10]</p>
+<p>What is your time zone? [Europe/Paris] America/New York</p>
+<p>Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n)</p>
+<p>Do you want an auto-reload & simpleHTTP script to assist with theme and site development? (Y/n)</p>
+<p>Do you want to upload your website using FTP? (y/N)</p>
+<p>Do you want to upload your website using SSH? (y/N)</p>
+<p>Do you want to upload your website using Dropbox? (y/N)</p>
+<p>Do you want to upload your website using S3? (y/N)</p>
+<p>Do you want to upload your website using Rackspace Cloud Files? (y/N)</p>
+<p>Do you want to upload your website using GitHub Pages? (y/N)</p>
+</blockquote>
+<ul>
+<li><p>Upon completing these questions, some new files and sub folders will be automatically created in your folder, such as <code>content</code> folder, <code>output</code> folder, and <code>fabfile.py</code>, <code>pelicanconf.py</code>, and <code>publishconf.py</code>.</p>
+<p>To view the content of your folder, run the following command:</p>
+</li>
+</ul>
+<blockquote><p>(pelicantest) D:\TDSblog>dir</p>
+</blockquote>
+<pre><code>To view the structure of your folder, run the following command:
+
+</code></pre>
+<blockquote><p>(pelicantest) D:\TDSblog>tree</p>
+</blockquote>
+<h2 id="Apply-Bootstrap3-Theme-and-Install-Plugins">Apply Bootstrap3 Theme and Install Plugins<a class="anchor-link" href="#Apply-Bootstrap3-Theme-and-Install-Plugins">¶</a></h2><p>To get the look and feel of the default theme of Pelican-based website, check out <a href="https://blog.getpelican.com/">this link</a>. If you're interested in other Pelican themes, check out <a href="https://github.com/getpelican/pelican-themes">this link</a>.</p>
+<p>In this guide, we'll use <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3">Bootstrap3</a> as the website theme.</p>
+<ul>
+<li>Execute the following command to set up your folder as a git repository:</li>
+</ul>
+<blockquote><p>(pelicantest) D:\TDSblog>git init</p>
+</blockquote>
+<ul>
+<li>Execute the following command to clone the Pelican themes repository to your local computer:</li>
+</ul>
+<blockquote><p>(pelicantest) D:\TDSblog>git clone <a href="https://github.com/getpelican/pelican-themes/">https://github.com/getpelican/pelican-themes/</a> themes</p>
+</blockquote>
+<ul>
+<li>Execute the following command to clone the Pelican plugins repository to your local computer: </li>
+</ul>
+<blockquote><p>(pelicantest) D:\TDSblog>git clone <a href="https://github.com/getpelican/pelican-plugins">https://github.com/getpelican/pelican-plugins</a> plugins</p>
+</blockquote>
+<ul>
+<li>Add the following information to the bottom of <code>pelicanconf.py</code> in your folder and save. </li>
+</ul>
+<blockquote><p>MARKUP = ('md', 'ipynb')</p>
+<p>PLUGIN_PATHS = ['plugins']
+PLUGINS = ['ipynb.markup','i18n_subsites']</p>
+<p>THEME = 'themes/pelican-bootstrap3'
+JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}</p>
+</blockquote>
+<ul>
+<li>Execute the following command to add the Pelican plugins for Jupyter/IPython Notebooks</li>
+</ul>
+<blockquote><p>(pelicantest) D:\TDSblog>git submodule add git://github.com/danielfrg/pelican-ipynb.git plugins/ipynb</p>
+</blockquote>
+<ul>
+<li><p>Upon completing the steps above, you should have additional files and sub folders created in your folder, such as <code>themes</code> folder, <code>plugins</code> folder, and <code>.gitmodules</code> file.</p>
+<p>To view the content of your folder, run the following command:</p>
+</li>
+</ul>
+<blockquote><p>(pelicantest) D:\TDSblog>dir</p>
+</blockquote>
+<pre><code>To view the structure of your folder, run the following command:
+
+</code></pre>
+<blockquote><p>(pelicantest) D:\TDSblog>tree</p>
+</blockquote>
+<h2 id="Write-the-First-Blog-Post">Write the First Blog Post<a class="anchor-link" href="#Write-the-First-Blog-Post">¶</a></h2><p>Once you complete installing the Pelican themes and plugins, you can start writing your first blog post using the Jupyter Notebook interface.</p>
+<ul>
+<li>Create a Jupyter Notebook (a <code>.ipynb</code> file) with any content you'd like and save it to the <code>content</code> folder. </li>
+</ul>
+<p>If you're not familiar with Jupyter Notebook, you can download a quick example of <code>.ipynb</code> from <a href="">here</a> and save it to your <code>content</code> folder.</p>
+<ul>
+<li>Check out <a href="http://jupyter.org/">this link</a> for more information about what Jupyter Notebook is about</li>
+<li>Check out <a href="https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks">this link</a> for a gallary of interesting Jupyter Notebooks</li>
+<li><p>Check out <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code">this link</a> for the Markdown Syntax</p>
+</li>
+<li><p>Create a new file with the same name as <code>.ipynb</code> file but with extension <code>.ipynb-meta</code>.</p>
+</li>
+<li><p>Enter the following content into the <code>.ipynb-meta</code> file and save it to your <code>content</code> folder.</p>
+</li>
+</ul>
+<blockquote><p>Title:</p>
+<p>Slug:</p>
+<p>Date:</p>
+<p>Category:</p>
+<p>Tags:</p>
+<p>Author:</p>
+<p>Summary:</p>
+</blockquote>
+<p>For example, the Jupyter Notebook I created is <code>first-post.ipynb</code> and the metadata file I created is <code>first-post.ipynb-meta</code> with the following content:</p>
+<blockquote><p>Title: First Post</p>
+<p>Slug: first-post</p>
+<p>Date: 2017-07-09 15:00</p>
+<p>Category: posts</p>
+<p>Tags: Pelican Python GitHub Jupyter</p>
+<p>Author: Superduper Writer</p>
+<p>Summary: First blog post on Superduper Blog</p>
+</blockquote>
+<p><code>.ipynb</code> and <code>.ipynb-meta</code> should be in pairs in the <code>content</code> folder when adding a new post. <code>.ipynb</code> provides the content of your post, such as the charts, words, code etc. and <code>.ipynb-meta</code> provides the metadata of your post.</p>
+<h2 id="Generate-HTML-Files">Generate HTML Files<a class="anchor-link" href="#Generate-HTML-Files">¶</a></h2><p>Now you've completed writing the first post and its metadata, we'll generate HTML files and preview the blog before posting it to GitHub. Before starting the following steps, make sure you're still under the main folder, not under <code>content</code>. If not, run <code>pushd yourfolder</code> in the Windows command shell. In my case, I run <code>pushd D:\TDSblog</code> instead.</p>
+<ul>
+<li>Run the following command to generate HTML files</li>
+</ul>
+<blockquote><p>(pelicantest) D:\TDSblog>pelican content</p>
+</blockquote>
+<ul>
+<li>Go to the <code>output</code> folder by executing the following command</li>
+</ul>
+<blockquote><p>(pelicantest) D:\TDSblog>cd output</p>
+</blockquote>
+<ul>
+<li>Run the following command to post your blog to local server</li>
+</ul>
+<blockquote><p>(pelicantest) D:\TDSblog>python -m pelican.server</p>
+</blockquote>
+<ul>
+<li>Preview the blog by visiting <code>localhost:8000</code> using your internet browser. </li>
+</ul>
+<h2 id="Set-Up-GitHub-Pages">Set Up GitHub Pages<a class="anchor-link" href="#Set-Up-GitHub-Pages">¶</a></h2><p>Signing up a GitHub account is one of the prerequisites. Once you have a GitHub account, you can follow steps below to set up your website hosted by GitHub on the domain of GitHub.io.</p>
+<ul>
+<li>Create a repository named as <code>username.github.io</code> where <code>username</code> is the name of your GitHub account. This <a href="https://help.github.com/articles/create-a-repo/">link</a> provides more details about how to set up a repository on GitHub. Follow steps under the <code>Create A Repo</code> section.</li>
+</ul>
+<p>You'll have two options:</p>
+<ol>
+<li>A free account with your files visible to any GitHub users</li>
+<li>A paid private account</li>
+</ol>
+<p>For now, you can start with the free one to set up the bone of your blog. You can upgrade it to paid later on if you'd like.</p>
+<ul>
+<li>Run the following command to add the new remote repository you just created for your local git repository. Replace <code>username</code> with the name of your GitHub account. Note that you need to run the command under the main folder where your blog files sit.</li>
+</ul>
+<blockquote><p>(pelicantest) D:\TDSblog>git remote add origin git@github.com:username/username.github.io.git</p>
+</blockquote>
+<ul>
+<li>Update <code>SITEURL</code> in <code>publishconf.py</code> in your local folder, by setting <code>SITEURL</code> to <code>https://username.github.io</code>. Replace <code>username</code> with the name of your GitHub account.</li>
+</ul>
+<ul>
+<li>Run the following command to configure Pelican settings in <code>publishconf.py</code></li>
+</ul>
+<blockquote><p>(pelicantest) D:\TDSblog>pelican content -s publishconf.py</p>
+</blockquote>
+<ul>
+<li>Run the following command from your main folder in order to import the content of <code>output</code> folder to the master branch</li>
+</ul>
+<blockquote><p>(pelicantest) D:\TDSblog>ghp-import output -b master</p>
+</blockquote>
+<ul>
+<li>Run the following command from your main folder in order to push the content to GitHub</li>
+</ul>
+<blockquote><p>(pelicantest) D:\TDSblog>git push origin master</p>
+</blockquote>
+<ul>
+<li>Visit <code>https://username.github.io</code> with <code>username</code> replaced by the name of your GitHub account. You should see your blog running on the GitHub.io domain. </li>
+</ul>
+<p>If you make any additional edits to the first post of your blog, follow the steps as below and your GitHub Pages will be updated accordingly:</p>
+<ol>
+<li>Save the updated <code>.ipynb</code> and <code>.ipynb-meta</code> file in your <code>content</code> folder and keep both file names the same, except for extensions</li>
+<li>Run <code>pelican content -s publishconf.py</code> in the root of the local repository</li>
+<li>Run <code>ghp-import output -b master</code> in the root of the local repository</li>
+<li>Run <code>git push origin master</code> in the root of the local repository</li>
+</ol>
+<p>If you'd like to use a custom domain, i.e. not the GitHub.io domain, check out <a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/">this link</a> for additional information.</p>
 </div>
 </div>
 </div>
