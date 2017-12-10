@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Triangle Data Science</title><link href="https://triangledatascience.github.io/" rel="alternate"></link><link href="https://triangledatascience.github.io/feeds/all.atom.xml" rel="self"></link><id>https://triangledatascience.github.io/</id><updated>2017-12-10T15:10:00-05:00</updated><entry><title>Guide to Creating GitHub Pages using Python and Jupyter Notebook</title><link href="https://triangledatascience.github.io/github-page-creation-guide.html" rel="alternate"></link><published>2017-12-10T15:10:00-05:00</published><updated>2017-12-10T15:10:00-05:00</updated><author><name>Dan</name></author><id>tag:triangledatascience.github.io,2017-12-10:/github-page-creation-guide.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Triangle Data Science</title><link href="https://triangledatascience.github.io/" rel="alternate"></link><link href="https://triangledatascience.github.io/feeds/all.atom.xml" rel="self"></link><id>https://triangledatascience.github.io/</id><updated>2017-12-10T15:10:00-05:00</updated><entry><title>How to Create a Blog Using Python, GitHub, Pelican, and Jupyter Notebook</title><link href="https://triangledatascience.github.io/github-page-creation-guide.html" rel="alternate"></link><published>2017-12-10T15:10:00-05:00</published><updated>2017-12-10T15:10:00-05:00</updated><author><name>Dan</name></author><id>tag:triangledatascience.github.io,2017-12-10:/github-page-creation-guide.html</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
 &lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="A-Beginner's-Guide-to-Creating-a-Blog"&gt;A Beginner's Guide to Creating a Blog&lt;a class="anchor-link" href="#A-Beginner's-Guide-to-Creating-a-Blog"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;h3 id="Using-Python,-GitHub,-Pelican,-and-Jupyter-Notebook"&gt;Using Python, GitHub, Pelican, and Jupyter Notebook&lt;a class="anchor-link" href="#Using-Python,-GitHub,-Pelican,-and-Jupyter-Notebook"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;hr /&gt;
-&lt;p&gt;So you want to create a blog?&lt;/p&gt;
-&lt;p&gt;Congratulations that you finally decided to take the first step!&lt;/p&gt;
-&lt;p&gt;In this guide, I will walk you through step-by-step how to create a blog on GitHub.io. The good news is that all the tools used in this process are free:) At the end of the guide, you should be able to:&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+&lt;p&gt;Congratulations that you finally decided to take the first step of creating a blog!&lt;/p&gt;
+&lt;p&gt;In this guide, I will walk you through step-by-step how to create a blog on GitHub.io. The good news is that all the tools used in this process are intuitive and free. At the end of the guide, you should be able to:&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -985,10 +983,8 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="A-Beginner's-Guide-to-Creating-a-Blog"&gt;A Beginner's Guide to Creating a Blog&lt;a class="anchor-link" href="#A-Beginner's-Guide-to-Creating-a-Blog"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;h3 id="Using-Python,-GitHub,-Pelican,-and-Jupyter-Notebook"&gt;Using Python, GitHub, Pelican, and Jupyter Notebook&lt;a class="anchor-link" href="#Using-Python,-GitHub,-Pelican,-and-Jupyter-Notebook"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;hr /&gt;
-&lt;p&gt;So you want to create a blog?&lt;/p&gt;
-&lt;p&gt;Congratulations that you finally decided to take the first step!&lt;/p&gt;
-&lt;p&gt;In this guide, I will walk you through step-by-step how to create a blog on GitHub.io. The good news is that all the tools used in this process are free:) At the end of the guide, you should be able to:&lt;/p&gt;
+&lt;p&gt;Congratulations that you finally decided to take the first step of creating a blog!&lt;/p&gt;
+&lt;p&gt;In this guide, I will walk you through step-by-step how to create a blog on GitHub.io. The good news is that all the tools used in this process are intuitive and free. At the end of the guide, you should be able to:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Create a blog on GitHub.io &lt;/li&gt;
 &lt;li&gt;Set up the initial look and feel for the blog using Pelican Bootstrap3 theme&lt;/li&gt;
@@ -1029,15 +1025,15 @@ h6:hover .anchor-link {
 &lt;li&gt;Upon executing &lt;code&gt;conda create -n yourenvname python=x.x anaconda&lt;/code&gt;, you'll be prompted to confirm whether you'd like to proceed. Press &lt;code&gt;y&lt;/code&gt; to proceed. &lt;/li&gt;
 &lt;/ul&gt;
 &lt;ul&gt;
-&lt;li&gt;To &lt;code&gt;activate&lt;/code&gt; your virtual environment, execute &lt;code&gt;activate yourenvname&lt;/code&gt; in the Windows command shell.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;To &lt;code&gt;activate&lt;/code&gt; your virtual environment, execute &lt;code&gt;activate yourenvname&lt;/code&gt; in the Windows command shell.&lt;/p&gt;
+&lt;p&gt;C:\Users\Dan&gt;activate pelicantest&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;blockquote&gt;&lt;p&gt;C:\Users\Dan&gt;activate pelicantest&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;And you should see `(yourenvname)` appears as the leading string in the next line in the Windows command shell.
+&lt;p&gt;And you should see &lt;code&gt;(yourenvname)&lt;/code&gt; appears as the leading string in the next line in the Windows command shell.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(pelicantest) C:\Users\Dan&gt;
+
 
 &lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;&lt;p&gt;(pelicantest) C:\Users\Dan&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;p&gt;Upon successfully set up the virtual environment, a new folder &lt;code&gt;pelicantest&lt;/code&gt; appears under &lt;code&gt;C:\Users\Dan\Anaconda3\envs\&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Some of you may have a different Python distribution other than Anaconda. In that case, you can set up &lt;code&gt;virtualenv&lt;/code&gt; and activate it by following instructions &lt;a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="Install-Pelican-and-Python-Packages"&gt;Install Pelican and Python Packages&lt;a class="anchor-link" href="#Install-Pelican-and-Python-Packages"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Pelican is one of the most popular &lt;code&gt;static site generators&lt;/code&gt;. Static site generators free you from manually editing HTML files. With their help, you can focus on:&lt;/p&gt;

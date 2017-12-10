@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="english" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Guide to Creating GitHub Pages using Python and Jupyter Notebook - Triangle Data Science</title>
+    <title>How to Create a Blog Using Python, GitHub, Pelican, and Jupyter Notebook - Triangle Data Science</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -13,15 +13,15 @@
 
         <meta name="author" content="Dan" />
         <meta name="keywords" content="Python,GitHub,Pelican,Jupyter Notebook" />
-        <meta name="description" content="A Beginner&#39;s Guide to Creating a Blog¶Using Python, GitHub, Pelican, and Jupyter Notebook¶ So you want to create a blog? Congratulations that you finally decided to take the first step! In this guide, I will walk you through step-by-step how to create a blog on GitHub.io. The good news is that all the tools used in this process are free:) At the end of the guide, you should be able to:" />
+        <meta name="description" content="Congratulations that you finally decided to take the first step of creating a blog! In this guide, I will walk you through step-by-step how to create a blog on GitHub.io. The good news is that all the tools used in this process are intuitive and free. At the end of the guide, you should be able to:" />
 
         <meta property="og:site_name" content="Triangle Data Science" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Guide to Creating GitHub Pages using Python and Jupyter Notebook"/>
+        <meta property="og:title" content="How to Create a Blog Using Python, GitHub, Pelican, and Jupyter Notebook"/>
         <meta property="og:url" content="https://triangledatascience.github.io/github-page-creation-guide.html"/>
-        <meta property="og:description" content="A Beginner&#39;s Guide to Creating a Blog¶Using Python, GitHub, Pelican, and Jupyter Notebook¶ So you want to create a blog? Congratulations that you finally decided to take the first step! In this guide, I will walk you through step-by-step how to create a blog on GitHub.io. The good news is that all the tools used in this process are free:) At the end of the guide, you should be able to:"/>
+        <meta property="og:description" content="Congratulations that you finally decided to take the first step of creating a blog! In this guide, I will walk you through step-by-step how to create a blog on GitHub.io. The good news is that all the tools used in this process are intuitive and free. At the end of the guide, you should be able to:"/>
         <meta property="article:published_time" content="2017-12-10" />
-            <meta property="article:section" content="posts" />
+            <meta property="article:section" content="Technical" />
             <meta property="article:tag" content="Python" />
             <meta property="article:tag" content="GitHub" />
             <meta property="article:tag" content="Pelican" />
@@ -41,8 +41,8 @@
 
 
 
-        <link href="https://triangledatascience.github.io/feeds/posts.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Triangle Data Science posts ATOM Feed"/>
+        <link href="https://triangledatascience.github.io/feeds/technical.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Triangle Data Science Technical ATOM Feed"/>
 
 </head>
 <body>
@@ -62,7 +62,7 @@ Triangle Data Science            </a>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                         <li class="active">
-                            <a href="https://triangledatascience.github.io/category/posts.html">Posts</a>
+                            <a href="https://triangledatascience.github.io/category/technical.html">Technical</a>
                         </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -82,8 +82,8 @@ Triangle Data Science            </a>
                 <h1>
                     <a href="https://triangledatascience.github.io/github-page-creation-guide.html"
                        rel="bookmark"
-                       title="Permalink to Guide to Creating GitHub Pages using Python and Jupyter Notebook">
-                        Guide to Creating GitHub Pages using Python and Jupyter Notebook
+                       title="Permalink to How to Create a Blog Using Python, GitHub, Pelican, and Jupyter Notebook">
+                        How to Create a Blog Using Python, GitHub, Pelican, and Jupyter Notebook
                     </a>
                 </h1>
             </header>
@@ -1088,10 +1088,8 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="A-Beginner's-Guide-to-Creating-a-Blog">A Beginner's Guide to Creating a Blog<a class="anchor-link" href="#A-Beginner's-Guide-to-Creating-a-Blog">¶</a></h1><h3 id="Using-Python,-GitHub,-Pelican,-and-Jupyter-Notebook">Using Python, GitHub, Pelican, and Jupyter Notebook<a class="anchor-link" href="#Using-Python,-GitHub,-Pelican,-and-Jupyter-Notebook">¶</a></h3><hr />
-<p>So you want to create a blog?</p>
-<p>Congratulations that you finally decided to take the first step!</p>
-<p>In this guide, I will walk you through step-by-step how to create a blog on GitHub.io. The good news is that all the tools used in this process are free:) At the end of the guide, you should be able to:</p>
+<p>Congratulations that you finally decided to take the first step of creating a blog!</p>
+<p>In this guide, I will walk you through step-by-step how to create a blog on GitHub.io. The good news is that all the tools used in this process are intuitive and free. At the end of the guide, you should be able to:</p>
 <ul>
 <li>Create a blog on GitHub.io </li>
 <li>Set up the initial look and feel for the blog using Pelican Bootstrap3 theme</li>
@@ -1132,15 +1130,15 @@ h6:hover .anchor-link {
 <li>Upon executing <code>conda create -n yourenvname python=x.x anaconda</code>, you'll be prompted to confirm whether you'd like to proceed. Press <code>y</code> to proceed. </li>
 </ul>
 <ul>
-<li>To <code>activate</code> your virtual environment, execute <code>activate yourenvname</code> in the Windows command shell.</li>
+<li><p>To <code>activate</code> your virtual environment, execute <code>activate yourenvname</code> in the Windows command shell.</p>
+<p>C:\Users\Dan>activate pelicantest</p>
+</li>
 </ul>
-<blockquote><p>C:\Users\Dan>activate pelicantest</p>
-</blockquote>
-<pre><code>And you should see `(yourenvname)` appears as the leading string in the next line in the Windows command shell.
+<p>And you should see <code>(yourenvname)</code> appears as the leading string in the next line in the Windows command shell.</p>
+<pre><code>(pelicantest) C:\Users\Dan>
+
 
 </code></pre>
-<blockquote><p>(pelicantest) C:\Users\Dan></p>
-</blockquote>
 <p>Upon successfully set up the virtual environment, a new folder <code>pelicantest</code> appears under <code>C:\Users\Dan\Anaconda3\envs\</code>.</p>
 <p>Some of you may have a different Python distribution other than Anaconda. In that case, you can set up <code>virtualenv</code> and activate it by following instructions <a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">here</a>.</p>
 <h2 id="Install-Pelican-and-Python-Packages">Install Pelican and Python Packages<a class="anchor-link" href="#Install-Pelican-and-Python-Packages">¶</a></h2><p>Pelican is one of the most popular <code>static site generators</code>. Static site generators free you from manually editing HTML files. With their help, you can focus on:</p>
