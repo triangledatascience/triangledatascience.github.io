@@ -1082,9 +1082,7 @@ pyreadline~=2.1
 smartypants~=2.0.0
 
 typogrify~=2.0.7&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;If you a different Python distribution other than Anaconda, copy and paste the following contents to `requirements.txt` instead, in case your installation doesn't cover these useful pacakges for website building. 
-
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you a different Python distribution other than Anaconda, copy and paste the following contents to &lt;code&gt;requirements.txt&lt;/code&gt; instead, in case your installation doesn't cover these useful pacakges for website building.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;beautifulsoup4~=4.6.0
 
 Fabric3~=1.13.1.post1
@@ -1116,16 +1114,12 @@ pyreadline~=2.1
 smartypants~=2.0.0
 
 typogrify~=2.0.7&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;If you're interested in the latest version of these Python packages, go to this [site](https://pypi.python.org/pypi) and search for the package you'd like to update. It also explains what a package is for.
-
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you're interested in the latest version of these Python packages, go to this &lt;a href="https://pypi.python.org/pypi"&gt;site&lt;/a&gt; and search for the package you'd like to update. It also explains what a package is for.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Execute the following command in Windows command shell to install Python packages listed in &lt;code&gt;requirements.txt&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code&gt;(pelicantest) D:\TDSblog&gt;pip install -r C:\Users\Dan\Anaconda3\envs\pelicantest\requirements.txt&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;To double check whether the installation is successful, execute the following commands. It'll show all the Python packages installed so far and you should be able to find those listed in `requirements.txt`.
-
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To double check whether the installation is successful, execute the following commands. It'll show all the Python packages installed so far and you should be able to find those listed in &lt;code&gt;requirements.txt&lt;/code&gt;.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;(pelicantest) D:\TDSblog&gt;pip list&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id="Create-a-Default-Website"&gt;Create a Default Website&lt;a class="anchor-link" href="#Create-a-Default-Website"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;With the virtual environment set up and Python packages installed, we can now start setting up the website in the default style.&lt;/p&gt;
 &lt;ul&gt;
@@ -1167,14 +1161,11 @@ Do you want to upload your website using Rackspace Cloud Files? (y/N)
 
 Do you want to upload your website using GitHub Pages? (y/N)&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Upon completing these questions, some new files and sub folders will be automatically created in your folder, such as &lt;code&gt;content&lt;/code&gt; folder, &lt;code&gt;output&lt;/code&gt; folder, and &lt;code&gt;fabfile.py&lt;/code&gt;, &lt;code&gt;pelicanconf.py&lt;/code&gt;, and &lt;code&gt;publishconf.py&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;To view the content of your folder, run the following command:&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;Upon completing these questions, some new files and sub folders will be automatically created in your folder, such as &lt;code&gt;content&lt;/code&gt; folder, &lt;code&gt;output&lt;/code&gt; folder, and &lt;code&gt;fabfile.py&lt;/code&gt;, &lt;code&gt;pelicanconf.py&lt;/code&gt;, and &lt;code&gt;publishconf.py&lt;/code&gt;. &lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;To view the content of your folder, run the following command:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;(pelicantest) D:\TDSblog&gt;dir&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;To view the structure of your folder, run the following command:
-
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To view the structure of your folder, run the following command:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;(pelicantest) D:\TDSblog&gt;tree&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id="Apply-Bootstrap3-Theme-and-Install-Plugins"&gt;Apply Bootstrap3 Theme and Install Plugins&lt;a class="anchor-link" href="#Apply-Bootstrap3-Theme-and-Install-Plugins"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;To get the look and feel of the default theme of Pelican-based website, check out &lt;a href="https://blog.getpelican.com/"&gt;this link&lt;/a&gt;. If you're interested in other Pelican themes, check out &lt;a href="https://github.com/getpelican/pelican-themes"&gt;this link&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In this guide, we'll use &lt;a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3"&gt;Bootstrap3&lt;/a&gt; as the website theme.&lt;/p&gt;
@@ -1205,14 +1196,11 @@ JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}&lt;/code&gt;&lt;/pre&gt;
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code&gt;(pelicantest) D:\TDSblog&gt;git submodule add git://github.com/danielfrg/pelican-ipynb.git plugins/ipynb&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Upon completing the steps above, you should have additional files and sub folders created in your folder, such as &lt;code&gt;themes&lt;/code&gt; folder, &lt;code&gt;plugins&lt;/code&gt; folder, and &lt;code&gt;.gitmodules&lt;/code&gt; file.&lt;/p&gt;
-&lt;p&gt;To view the content of your folder, run the following command:&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;Upon completing the steps above, you should have additional files and sub folders created in your folder, such as &lt;code&gt;themes&lt;/code&gt; folder, &lt;code&gt;plugins&lt;/code&gt; folder, and &lt;code&gt;.gitmodules&lt;/code&gt; file.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;To view the content of your folder, run the following command:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;(pelicantest) D:\TDSblog&gt;dir&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;To view the structure of your folder, run the following command:
-
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To view the structure of your folder, run the following command:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;(pelicantest) D:\TDSblog&gt;tree&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id="Write-the-First-Blog-Post"&gt;Write the First Blog Post&lt;a class="anchor-link" href="#Write-the-First-Blog-Post"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Once you complete installing the Pelican themes and plugins, you can start writing your first blog post using the Jupyter Notebook interface.&lt;/p&gt;
 &lt;ul&gt;

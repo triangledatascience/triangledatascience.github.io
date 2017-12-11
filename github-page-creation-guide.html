@@ -1187,9 +1187,7 @@ pyreadline~=2.1
 smartypants~=2.0.0
 
 typogrify~=2.0.7</code></pre>
-<pre><code>If you a different Python distribution other than Anaconda, copy and paste the following contents to `requirements.txt` instead, in case your installation doesn't cover these useful pacakges for website building. 
-
-</code></pre>
+<p>If you a different Python distribution other than Anaconda, copy and paste the following contents to <code>requirements.txt</code> instead, in case your installation doesn't cover these useful pacakges for website building.</p>
 <pre><code>beautifulsoup4~=4.6.0
 
 Fabric3~=1.13.1.post1
@@ -1221,16 +1219,12 @@ pyreadline~=2.1
 smartypants~=2.0.0
 
 typogrify~=2.0.7</code></pre>
-<pre><code>If you're interested in the latest version of these Python packages, go to this [site](https://pypi.python.org/pypi) and search for the package you'd like to update. It also explains what a package is for.
-
-</code></pre>
+<p>If you're interested in the latest version of these Python packages, go to this <a href="https://pypi.python.org/pypi">site</a> and search for the package you'd like to update. It also explains what a package is for.</p>
 <ul>
 <li>Execute the following command in Windows command shell to install Python packages listed in <code>requirements.txt</code></li>
 </ul>
 <pre><code>(pelicantest) D:\TDSblog>pip install -r C:\Users\Dan\Anaconda3\envs\pelicantest\requirements.txt</code></pre>
-<pre><code>To double check whether the installation is successful, execute the following commands. It'll show all the Python packages installed so far and you should be able to find those listed in `requirements.txt`.
-
-</code></pre>
+<p>To double check whether the installation is successful, execute the following commands. It'll show all the Python packages installed so far and you should be able to find those listed in <code>requirements.txt</code>.</p>
 <pre><code>(pelicantest) D:\TDSblog>pip list</code></pre>
 <h2 id="Create-a-Default-Website">Create a Default Website<a class="anchor-link" href="#Create-a-Default-Website">¶</a></h2><p>With the virtual environment set up and Python packages installed, we can now start setting up the website in the default style.</p>
 <ul>
@@ -1272,14 +1266,11 @@ Do you want to upload your website using Rackspace Cloud Files? (y/N)
 
 Do you want to upload your website using GitHub Pages? (y/N)</code></pre>
 <ul>
-<li><p>Upon completing these questions, some new files and sub folders will be automatically created in your folder, such as <code>content</code> folder, <code>output</code> folder, and <code>fabfile.py</code>, <code>pelicanconf.py</code>, and <code>publishconf.py</code>.</p>
-<p>To view the content of your folder, run the following command:</p>
-</li>
+<li>Upon completing these questions, some new files and sub folders will be automatically created in your folder, such as <code>content</code> folder, <code>output</code> folder, and <code>fabfile.py</code>, <code>pelicanconf.py</code>, and <code>publishconf.py</code>. </li>
 </ul>
+<p>To view the content of your folder, run the following command:</p>
 <pre><code>(pelicantest) D:\TDSblog>dir</code></pre>
-<pre><code>To view the structure of your folder, run the following command:
-
-</code></pre>
+<p>To view the structure of your folder, run the following command:</p>
 <pre><code>(pelicantest) D:\TDSblog>tree</code></pre>
 <h2 id="Apply-Bootstrap3-Theme-and-Install-Plugins">Apply Bootstrap3 Theme and Install Plugins<a class="anchor-link" href="#Apply-Bootstrap3-Theme-and-Install-Plugins">¶</a></h2><p>To get the look and feel of the default theme of Pelican-based website, check out <a href="https://blog.getpelican.com/">this link</a>. If you're interested in other Pelican themes, check out <a href="https://github.com/getpelican/pelican-themes">this link</a>.</p>
 <p>In this guide, we'll use <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3">Bootstrap3</a> as the website theme.</p>
@@ -1310,14 +1301,11 @@ JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}</code></pre>
 </ul>
 <pre><code>(pelicantest) D:\TDSblog>git submodule add git://github.com/danielfrg/pelican-ipynb.git plugins/ipynb</code></pre>
 <ul>
-<li><p>Upon completing the steps above, you should have additional files and sub folders created in your folder, such as <code>themes</code> folder, <code>plugins</code> folder, and <code>.gitmodules</code> file.</p>
-<p>To view the content of your folder, run the following command:</p>
-</li>
+<li>Upon completing the steps above, you should have additional files and sub folders created in your folder, such as <code>themes</code> folder, <code>plugins</code> folder, and <code>.gitmodules</code> file.</li>
 </ul>
+<p>To view the content of your folder, run the following command:</p>
 <pre><code>(pelicantest) D:\TDSblog>dir</code></pre>
-<pre><code>To view the structure of your folder, run the following command:
-
-</code></pre>
+<p>To view the structure of your folder, run the following command:</p>
 <pre><code>(pelicantest) D:\TDSblog>tree</code></pre>
 <h2 id="Write-the-First-Blog-Post">Write the First Blog Post<a class="anchor-link" href="#Write-the-First-Blog-Post">¶</a></h2><p>Once you complete installing the Pelican themes and plugins, you can start writing your first blog post using the Jupyter Notebook interface.</p>
 <ul>
